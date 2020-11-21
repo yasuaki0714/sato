@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+.sp {
+  display: none;
+}
+
+
+/*-----------------------------*/
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 32px;  
+  font-family: 'Poppins','Hira Kaku Pro';
+  letter-spacing: 1px;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+
+/*===================================
+Follow header Settings
+===================================*/
+.smallLogo {
+  position: absolute;
+  left: 15%;
+  top: 10%;
+}
+
+.menu {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+
+/*===================================
+mainVisual Settings
+===================================*/
+#mainVisual {
+  width: 100%;
+  height: 100vh;
+  height: 620px;
+  background: url("/img/img1.jpg") 0 0 no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+#mainVisual .logoBlock01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainVisual .logoBlock01 h1 {
+  margin-top: 11px;
+  margin-left: -2px;
+  margin-bottom: 31px;
+}
+
+#mainVisual .logoBlock01 p {
+  margin-left: -12px;
+  font-size: 22px;
+  font-family: "Hira Kaku Pro";
+  color: #fff;
+}
+
+
+/*===================================
+Concept Settings
+===================================*/
+#Concept {
+  padding: 20px 0 38px;
+}
+
+.conceptBackground {
+  width: 100%;
+  height: 280px;
+  margin-top: -198px;
+  background-color: #ededed;
+}
+
+
+/*===================================
+Works Settings
+===================================*/
+
+
+/*===================================
+Florist Settings
+===================================*/
+.floristBackground {
+  width: 100%;
+  height: 540px;
+  margin-bottom: -500px;
+  background-color: #ededed;
+}
+
+#Florist h3 {
+  font-size: 30px;
+  margin: 0 0 12px 1px;
+}
+
+
+/*===================================
+Shop_information Settings
+===================================*/
+#Shop_information{
+  margin-bottom: 170px;
+}
+
+address {
+  padding: 32px 0 0 0;
+}
+
+.addressListA01 {
+  display: flex;
+  margin: 0 0 22px 39px;
+}
+
+.addressListA01 dt {
+  width: 100px;
+}
+
+.addressListA01 dd {
+  border-left: 1px solid #a0a0a0;
+  padding: 0 0 0 30px;
+}
+
+
+/*===================================
+contact_us Settings
+===================================*/
+#contact_us {
+  height: 426px;
+  padding: 50px 0 0 0;
+  background: url("/img/index_bg_02.png") 0 0 no-repeat;
+  background-size: 100%;
+}
+
+
+/*===================================
+footer Settings
+===================================*/
+footer p {
+  text-align: center;
+}
+
+
+/*------------------------------------
+SP setting
+_____________________________________*/
+@media screen and (max-width:750px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #Concept,
+  #Works,
+  #Florist,
+  #Shop_information,
+  #contact_us {
+    width: 100%;
+  }
+
+  img {
+    width: 100%; 
+  }
+
+  .inner {
+    padding: 15px;
+  }
+
+  #mainVisual {
+    background: url("/img/index_bg_01_sp.png") 0 0 no-repeat;
+  }
+
+  #mainVisual .logoBlock01 h1 {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #florist {
+    width: 100%;
+  }
+  .floristBackground {
+    width: 100%;
+    height: 540px;
+    margin-bottom: -500px;
+    background-color: #ededed;
+  }
+
+    address {
+      padding: 0;
+    }
+
+    #contact_us { 
+      background: url("/img/index_bg_02_sp.png") 0 0 no-repeat;
+      background-size: 100%;
+    }
+}
