@@ -1,0 +1,22 @@
+バリデーション用アドオン
+
+ソースをコピペしてバリデーション
+
+WebページのURL（Ctrl + U）をコピーしW3Cの「Markup Validation Service」ページ
+「Validation by Direct Input」タグ内のテキストボックスにペーストし
+「Check」をクリックする
+
+
+≪js≫
+・クリップボードを使用したコピペ
+	参考URL：https://qiita.com/butakoma/items/642c0ec4b77f6bb5ebcf
+
+・htmlのソースコード取得
+document.getElementsByTagName(“html")[0].innerHTML
+
+で取得する事が出来る。
+ヘッダ部分が不要ならば
+document.getElementsByTagName(“body")[0].innerHTML
+とすればいいし、ヘッダ部分だけならばbodyの部分はheadとなる。
+
+参考URL：https://www.4web8.com/195.html
