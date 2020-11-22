@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アコーディオンメニュー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="contentsWrap">
+  <button class="btnOpen">メニューを開く<span id="arrow">↓</span></button>
+  <div class="panel">
+    <div class="panelInner">
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementsByClassName( 'btnOpen' ).item( 0 ),
+        panel = document.querySelector( '.panel' ),
+        panelH = panel.clientHeight;
+
+  panel.style.height = '0px';
+
+  btn.addEventListener( 'click', function () {
+    if(panel.style.height === '0px') {
+      panel.style.height = panelH + 'px';
+      document.getElementById('arrow').innerHTML = "↑";
+    } else {
+      panel.style.height = '0px';
+      document.getElementById('arrow').innerHTML = "↓";
+    }
+  }, false );
+</script>
+</body>
+</html>
