@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "游ゴシック", "Yu Gothic","游ゴシック体", YuGothic, sans-serif;
+  font-weight: 500;
+  line-height: 2.0;
+  letter-spacing: 0;
+  vertical-align: baseline;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+}
+
+/*================================
+header Settings
+================================*/
+#header {
+  background: url("/image/index_bg_01.png") 0 0 no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#header .logoBlock01 {
+  position: absolute;
+  bottom: 60px;
+  left: 60px
+}
+
+
+/*================================
+section01 Settings
+================================*/
+#section01 {
+  padding: 100px 0 94px;
+}
+
+#section01 .headingBlockA01 {
+  margin: 0 0 34px 0;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#section01 .textBlockA01 {
+  text-align: center;
+}
+
+
+/*================================
+section02 Settings
+================================*/
+#section02 {
+  width: 100%;
+  padding: 90px 0 100px;
+  background: url("/image/index_bg_02.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+#section02 .sectionInner {
+  width: 860px;
+  margin: 0 auto;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#section02 .headingBlockA02 {
+  margin: 0 0 38px 0;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+#section02 .imgBlockA01,
+#section02 .imgBlockA02 {
+  display: flex;
+}
+
+#section02 .imgBlockA02 {
+  flex-direction: row-reverse;
+}
+
+#section02 .imgBlockA01 .text,
+#section02 .imgBlockA02 .text {
+  padding: 37px 20px 0 21px;
+  background: #fff;
+  line-height: 1.75;
+}
+
+/* #section02 .imgBlockA01 .text p,
+#section02 .imgBlockA02 .text p {
+  margin-bottom: 1px;
+} */
+
+#section02 .imgBlockA01 .text .title,
+#section02 .imgBlockA02 .text .title {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/*================================
+section03 Settings
+================================*/
+#section03 {
+  padding: 90px 0 101px;
+}
+
+#section03 .sectionInner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#section03 .headingBlockA01 {
+  margin: 0 0 34px 0;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#section03 .textBlockA01 {
+  text-align: center;
+  margin: 0 0 64px 0;
+}
+
+#section03 .culmun4BlockA01 {
+  width: 780px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*================================
+footer Settings
+================================*/
+#footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 22px 0 22px 0;
+  background: #000;
+  color: #fff;
+}
+
+#footer #copyright {
+  position: absolute;
+  left: 45%;
+  top: 42%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.0;
+}
+
+#footer .footerList01 {
+  margin-right: 194px;
+}
+
+#footer .footerList01 ul {
+  display: flex;
+}
+
+#footer .footerList01 ul li {
+  line-height: 1.0;
+}
+
+#footer .footerList01 ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+#footer .footerList01 ul li a {
+  font-size: 1.2rem;
+  color: #fff;
+}
