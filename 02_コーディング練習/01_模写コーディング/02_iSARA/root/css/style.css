@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+html, body {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 5000vh;
+  background-color: aqua;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  color: #333;
+}
+
+a:active,
+a:hover,
+a:visited,
+a:link {
+  text-decoration: none;
+}
+
+/*==============================
+header Settings
+==============================*/
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  padding: 14px 81px 7px 98px;
+  margin: 0 auto;
+}
+
+.headerLogo {
+  display: flex;
+}
+
+.headerLogo img {
+  width: 128px;
+}
+
+.headerLogo .subtitle {
+  margin: 21px 0 0 7px;
+  vertical-align: baseline;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.contactBtn_pc {
+  display: block;
+  margin: 2px 0 0 0;
+  /* padding: 10px 39px; */
+  background: #da6b64;
+  border: 1px solid #da6b64;
+  border-radius: 40px;
+  font-size: 1.4rem;
+}
+
+.contactBtn_pc:hover {
+  opacity: 0.5;
+}
+
+.contactBtn_pc a {
+  width: 100%;
+  margin: 10px 39px;
+  display: block;
+  color: #fff;
+}
+
+/*==============================
+hero Settings
+==============================*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  padding: 0 0 0 50px;
+  background: url("/image/main.jpg") center 44px no-repeat;
+  background-size: cover;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.coverText {
+  padding: 168px 82px 0 0;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.coverText p {
+  margin: 0 0 10px 0;
+}
+
+.heroLogo img {
+  width: 57%;
+  margin: 0px 0 0 -78px;
+}
+
+.heroSubtitle {
+  margin: 27px 0 0 -80px;
+  font-size: 2.0rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.heroSubtitle p {
+  margin-bottom: -10px;
+}
+
+/*==============================
+cinversionArea Settings
+==============================*/
+#conversionArea {
+  width: 100%;
+  height: 80vh;
+  padding: 40px 0 0   0;
+  background: #ebb94d;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+#conversionArea .textBoxA01 {
+
+}
+
+#conversionArea .cnversionBtn {
+  margin: 2px 0 0 0;
+  background: #da6b64;
+  border: 1px solid #da6b64;
+  border-radius: 40px;
+  font-size: 2.4rem;
+}
+
+#conversionArea .cnversionBtn a {
+  display: block;
+  max-width: 1028px;
+  margin: 10px 39px;
+  color: #fff;
+}
+
+.bgTextBoxA01 {
+  display: block;
+  background: #fff;
+  color: #da6b64;
+}
+
+.bgTextBoxA01 {
+  
+}
