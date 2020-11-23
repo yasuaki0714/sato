@@ -12,9 +12,8 @@ body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 32px;  
-  font-family: 'Poppins','Hira Kaku Pro';
+  font-family: 'Poppins','Hira Kaku Pro', sans-serif;
   letter-spacing: 1px;
-  background: aqua;
 }
 
 .inner {
@@ -46,10 +45,10 @@ a:active {
 /*===================================
 Follow header Settings
 ===================================*/
-.smallLogo {
+.headerMenuLogo {
   position: absolute;
-  left: 15%;
-  top: 10%;
+  left: 14.4%;
+  top: 186%;
 }
 
 .menu {
@@ -110,19 +109,19 @@ Works Settings
   padding: 24px 0 0 0;
 }
 
+
+
 /*===================================
 Florist Settings
 ===================================*/
-.floristBackground {
-  width: 100%;
-  height: 540px;
-  margin-bottom: -500px;
-  background-color: #ededed;
+#Florist {
+  padding: 35px 0 62px 0;
+  background: linear-gradient(#ededed 53%, #fff 47%);
 }
 
 #Florist h3 {
   font-size: 30px;
-  margin: 0 0 12px 1px;
+  margin: 14px 0 12px 0px;
 }
 
 
@@ -156,8 +155,7 @@ address {
 contact_us Settings
 ===================================*/
 #contact_us {
-  height: 426px;
-  padding: 50px 0 0 0;
+  padding: 73px 0 69px 0;
   background: url("/img/index_bg_02.png") 0 0 no-repeat;
   background-size: 100%;
 }
@@ -166,15 +164,22 @@ contact_us Settings
 /*===================================
 footer Settings
 ===================================*/
-footer p {
+footer {
+  width: 100%;  
   text-align: center;
+  padding: 22px 0;
+}
+
+footer p {
+  line-height: 40px;
+  letter-spacing: 1.4px;
 }
 
 
-/*------------------------------------
+/*=====================================
 SP setting
-_____________________________________*/
-@media screen and (max-width:750px) {
+=====================================*/
+@media screen and (max-width:375px) {
   .pc {
     display: none;
   }
@@ -206,29 +211,88 @@ _____________________________________*/
 
   header {
     background: url("/img/index_bg_01_sp.png") 0 0 no-repeat;
+    height: 355px;
+  }
+
+  .headerMenuLogo {
+    position: absolute;
+    left: 22px;
+    top: 21px;
+    width: 67px;
   }
 
   header .logoBlock01 h1 {
+    margin-top: 93px;
+    margin-left: -2px;
+    margin-bottom: 31px;
+  }
+
+  header .logoBlock01 p {
+  margin: -10px 0 0 -17px;
+  letter-spacing: 1.5px;
+  font-size: 23px;
+  font-family: "Hira Kaku Pro";
+  color: #fff;
+  }
+
+  #Concept {
+    padding: 20px 0 5px;
+  }
+
+  #Florist {
+    width: 100%;
+    padding: 62px 0 30px 0;
+    margin: 0 0 0 -8px;
+  }
+
+  #florist .inner {
+    padding: 0;
+  }
+
+  #Florist h3 {
+    font-size: 23px;
+    margin: -1px 0 6px 1px;
+    letter-spacing: 0.2px;
+  }
+
+  #Florist p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 21px;
+    color: #000000;
+    font-family: "Hira Kaku Pro";
+    text-align: left;
+  }
+
+  #Shop_information .headingBlockA01 {
+    margin: 37px 0 50px -15px;
     text-align: center;
-    vertical-align: middle;
+    letter-spacing: 1.5;
   }
 
-  #florist {
+  #Shop_information .column2BlockB01>.item {
     width: 100%;
-  }
-  .floristBackground {
-    width: 100%;
-    height: 540px;
-    margin-bottom: -500px;
-    background-color: #ededed;
+    margin: 34px 0 0 0px;
+    padding: 0;
   }
 
-    address {
-      padding: 0;
-    }
+  address {
+    padding: 0;
+    margin: -28px 0 0 0;
+    font-size: 12px;
+  }
 
-    #contact_us { 
-      background: url("/img/index_bg_02_sp.png") 0 0 no-repeat;
-      background-size: 100%;
-    }
+  #contact_us {
+    padding: 56px 0 69px 0;
+    background: url(/img/index_bg_02_sp.png) 0 0 no-repeat;
+    background-size: cover  ;
+  }
+
+  #contact_us .textBlockA01 {
+    margin-bottom: 50px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
 }

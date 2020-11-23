@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/*==============================
+HTML Settings
+==============================*/
+html {
+  font-size: 6.25%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.0;
+  line-height: 26px;
+  color: #abadaf;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+ul,ol,li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+/* clearfix
+-------------------------------*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*==============================
+header Settings
+==============================*/
+#headerArea {
+  width: 100%;
+  background: #1d2126;
+}
+
+#headerAreaInner {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 23px 0 25px 14px;
+}
+
+#headerArea .logoBlock01 {
+  float: left;
+  margin: 3px 0 0 0;
+}
+
+#headerArea .headerNavBlock01 {
+  float: left;
+  margin-left: 411px;
+}
+
+#headerArea .headerNavBlock01 ul {
+  
+}
+
+#headerArea .headerNavBlock01 ul li {
+  float: left;
+}
+
+#headerArea .headerNavBlock01 ul li a {
+  width: 50px;
+  padding: 1px 8px 2px 9px;
+  color: #23b7a3;
+  border: 2px solid #23b7a3;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+#headerArea .headerNavBlock01 ul li a:hover {
+  color: #abadaf;
+  border: 2px solid #abadaf;
+  border-radius: 3px;
+}
+
+
+/*==============================
+heroArea Settings
+==============================*/
+#heroArea {
+  height: 660px;
+  background: url(/image/index_bg_01.png) -283px 0px no-repeat;
+  background-size: 141%;
+}
