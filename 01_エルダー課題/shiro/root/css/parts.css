@@ -7,6 +7,11 @@ headingBlock
   margin: 98px 0 50px 1px;
   text-align: center;
 }
+.headingBlockA01 .lead {
+  padding: 51px 0 0px 6px;
+  letter-spacing: 1.8px;
+}
+
 
 .headingBlockA02 {
   margin: 0 0 50px 0;
@@ -49,7 +54,8 @@ imageBlock
 =============================*/
 .imageBlockA01 {
   width: 960px;
-  margin: 1px auto 0;
+  margin: 0 auto;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -58,7 +64,11 @@ imageBlock
 }
 
 .imageBlockB01>.img {
-  margin: 0 0 22px 0;
+  margin: 0 0 22px 1px;
+}
+
+.imageBlockB01>.text {
+  padding: 0 0 0 2px;
 }
 
 .imageBlockB01 .text h3 {
@@ -215,12 +225,24 @@ buttonBlockA01
 
 
 /* ハンバーガーメニュー */
-.menu {
+.headerMenuWrap {
+  width: 100%;
   position: fixed;
   z-index: 2;
+  top: 0;
+  color: #fff;
 }
 
-.nav_toggle {
+.headerMenu {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.headerMenuToggle {
   display: block;
   position: relative;
   top: 0;
@@ -229,65 +251,65 @@ buttonBlockA01
   height: 1.5rem;
 }
 
-.nav_toggle:hover {
+.headerMenuToggle:hover {
   cursor: pointer;
 }
 
-.nav_toggle i {
+.headerMenuToggle i {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #333;
+  background-color: #fff;
   position: absolute;
   transition: transform .5s, opacity .5s;
 }
 
-.nav_toggle i:nth-child(1) {
+.headerMenuToggle i:nth-child(1) {
   top: 0;
 }
 
-.nav_toggle i:nth-child(2) {
+.headerMenuToggle i:nth-child(2) {
   top: 0;
   bottom: 0;
   margin: auto;
 }
 
-.nav_toggle i:nth-child(3) {
+.headerMenuToggle i:nth-child(3) {
   bottom: 0;
 }
 
-.nav_toggle.show i:nth-child(1) {
+.headerMenuToggle.show i:nth-child(1) {
   transform: translateY(10px) rotate(-45deg);
 }
 
-.nav_toggle.show i:nth-child(2) {
+.headerMenuToggle.show i:nth-child(2) {
   opacity: 0;
 }
 
-.nav_toggle.show i:nth-child(3) {
+.headerMenuToggle.show i:nth-child(3) {
   transform: translateY(-12px) rotate(45deg);
 }
 
-
-.nav {
+.headerNav {
   position: relative;
   top: 0;
   right: -10%;
   padding: 1rem;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: opacity .5s, visibility .5s;
   z-index: 2;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.nav_menu_li>a {
+.item>a {
   color: #fff;
   font-size: 22px;
   font-weight: bold;
 }
 
-.nav.show {
+.headerNav.show {
+  height: 80vh;
   opacity: 1;
-  visibility: visible;
+  display: block;
 }

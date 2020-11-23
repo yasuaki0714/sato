@@ -11,79 +11,71 @@
   <link rel="stylesheet" href="/css/parts.css">
 </head>
 <body>
-<!-- ヘッダー -->
-    <div class="smallLogo">
-      <img src="/img/index_logo_01.png" alt="">
+<header id="header">
+  <div class="headerMenuWrap">
+    <div class="headerMenu">
+      <div class="headerMenuLogo">Shiro</div>
+      <span class="headerMenuToggle">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+      <nav class="headerNav">
+        <ul class="headerNavList">
+          <li class="item"><a href="#Concept">Concept</a></li>
+          <li class="item"><a href="#Works">Works</a></li>
+          <li class="item"><a href="#Florist">Florist</a></li>
+          <li class="item"><a href="#Shop_information">Shop information</a></li>
+          <li class="item"><a href="#contact_us">Contact us</a></li>
+        </ul>
+      </nav>
     </div>
-      <div class="menu">
-        <span class="nav_toggle">
-          <i></i>
-          <i></i>
-          <i></i>
-        </span>
-        <nav class="nav">
-          <ul class="nav_menu_ul">
-            <li class="nav_menu_li"><a href="#Concept">Concept</a></li>
-            <li class="nav_menu_li"><a href="#Works">Works</a></li>
-            <li class="nav_menu_li"><a href="#Florist">Florist</a></li>
-            <li class="nav_menu_li"><a href="#Shop_information">Shop information</a></li>
-            <li class="nav_menu_li"><a href="#contact_us">Contact us</a></li>
-          </ul>
-        </nav>
-      </div>
-<!-- ヘッダー -->
-<section id="mainVisual">
+  </div>
   <div class="inner">
     <div class="logoBlock01">
       <h1>
         <picture>
-          <source srcset="/img/index_logo_02_sp.png" media="(max-width: 750px)">
+          <source srcset="/img/index_logo_02_sp.png" media="(max-width: 375px)">
           <img src="/img/index_logo_02.png" alt="Shiro" />
         </picture>
       </h1>
-      <p>- White flower shop -</p>
+      <p class="logoSubtitle">- White flower shop -</p>
     </div><!-- / .logoBlock01 -->
   </div>
-</section><!-- / #mainVisual -->
+</header><!-- / #header -->
 <main>
   <section id="Concept">
     <div class="inner">
       <div class="headingBlockA01">
         <h2>Concept</h2>
-      </div><!-- / .headingBlockA01 -->
-      <div class="textBlockA01">
-        <p>私たちShiroは、白いお花だけを取り扱うフラワーショップです。</p>
-        <p>色とりどりの花束も素敵だけれど、洗練された「白」の美しさを感じてほしい。</p>
-        <p>「白」に対する愛から生まれた静寂な時間が流れる店へ、ぜひお越しください。</p>
+        <div class="lead">
+          <p>私たちShiroは、白いお花だけを取り扱うフラワーショップです。</p>
+          <p>色とりどりの花束も素敵だけれど、洗練された「白」の美しさを感じてほしい。</p>
+          <p>「白」に対する愛から生まれた静寂な時間が流れる店へ、ぜひお越しください。</p>
+        </div><!-- / .lead -->
       </div><!-- / .headingBlockA01 -->
       <div class="imageBlockA01">
         <picture>
-          <source srcset="/img/index_img_01_sp.png" media="(max-width: 750px)">
+          <source srcset="/img/index_img_01_sp.png" media="(max-width: 375px)">
           <img src="/img/index_img_01.png" alt="" />
         </picture>
       </div><!-- / .imageBlockA01 -->
     </div>
-    <div class="conceptBackground"></div>
   </section><!-- / #Concept -->
   <section id="Works">
     <div class="inner">
       <div class="headingBlockA01">
         <h2>Works</h2>
-      </div><!-- / .headingBlockA01 -->
-      <div class="textBlockA01 pc">
-        <p>オーダーメイドでのブーケ・アレンジメントのデザインのほか、</p>
-        <p>ウェディングやイベントの装花なども行なっています。</p>
-        <p>一人一人にあったご提案をさせていただきます。</p>
-      </div><!-- / .textBlockA01 -->
-      <div class="textBlockA01 sp">
-        <p>オーダーメイドでのブーケ・アレンジメントのデザインのほか、ウェディングやイベントの装花なども行なっています。一人一人にあったご提案をさせていただきます。</p>
+      </div>
+      <div class="textBlockA01">
+        <p>オーダーメイドでのブーケ・アレンジメントのデザインのほか、<br>ウェディングやイベントの装花なども行なっています。<br>一人一人にあったご提案をさせていただきます。</p>
       </div><!-- / .textBlockA01 -->
       <div class="column2BlockA01">
         <div>
           <div class="imageBlockB01">
             <div class="img">
               <picture>
-                <source srcset="/img/index_img_02_sp.png" media="(max-width: 750px)">
+                <source srcset="/img/index_img_02_sp.png" media="(max-width: 375px)">
                 <img src="/img/index_img_02.png" alt="" />
               </picture>
             </div>
@@ -97,8 +89,22 @@
           <div class="imageBlockB01">
             <div class="img">
               <picture>
-                <source srcset="/img/index_img_03_sp.png" media="(max-width: 750px)">
+                <source srcset="/img/index_img_03_sp.png" media="(max-width: 375px)">
                 <img src="/img/index_img_03.png" alt="" />
+              </picture>
+            </div>
+            <div class="text">
+              <h3>Decoration</h3>
+              <p>お写真を彩るお花を一輪から販売。一定期間のご契約で定期的にご自宅へ配送させていただくことも可能です。</p>
+            </div>
+          </div><!-- / .imageBlockB01 -->
+        </div>
+        <div>
+          <div class="imageBlockB01">
+            <div>
+              <picture>
+                <source srcset="/img/index_img_04_sp.png" media="(max-width: 375px)">
+                <img src  ="/img/index_img_04.png" alt="" />
               </picture>
             </div>
             <div class="text">
@@ -109,29 +115,15 @@
         </div>
         <div>
           <div class="imageBlockB01">
-            <div>
+            <div class="img">
               <picture>
-                <source srcset="/img/index_img_04_sp.png" media="(max-width: 750px)">
-                <img src  ="/img/index_img_04.png" alt="" />
+                <source srcset="/img/index_img_05_sp.png" media="(max-width: 375px)">
+                <img src="/img/index_img_05.png" alt="" />
               </picture>
             </div>
             <div class="text">
               <h3>For yourself</h3>
               <p>お部屋の雰囲気やライフスタイルをお聞きしてご自宅用の花束をご提案し、少しでも長く咲かせるコツもお教えします。花束に合った花瓶をご提案することも可能です。</p>
-            </div>
-          </div><!-- / .imageBlockB01 -->
-        </div>
-        <div>
-          <div class="imageBlockB01">
-            <div class="img">
-              <picture>
-                <source srcset="/img/index_img_05_sp.png" media="(max-width: 750px)">
-                <img src="/img/index_img_05.png" alt="" />
-              </picture>
-            </div>
-            <div class="text">
-              <h3>Decoration</h3>
-              <p>お写真を彩るお花を一輪から販売。一定期間のご契約で定期的にご自宅へ配送させていただくことも可能です。</p>
             </div>
           </div><!-- / .imageBlockB01 -->
         </div>
@@ -152,7 +144,7 @@
         <div class="item">
           <div class="img">
             <picture>
-              <source srcset="/img/index_img_06_sp.png" media="(max-width: 750px)">
+              <source srcset="/img/index_img_06_sp.png" media="(max-width: 375px)">
               <img src="/img/index_img_06.png" alt="" />
             </picture>
           </div>
@@ -164,7 +156,7 @@
         <div class="item">
           <div class="img">
             <picture>
-              <source srcset="/img/index_img_07_sp.png" media="(max-width: 750px)">
+              <source srcset="/img/index_img_07_sp.png" media="(max-width: 375px)">
               <img src="/img/index_img_07.png" alt="" />
             </picture>
           </div>
@@ -176,7 +168,7 @@
         <div class="item">
           <div class="img">
             <picture>
-              <source srcset="/img/index_img_08_sp.png" media="(max-width: 750px)">
+              <source srcset="/img/index_img_08_sp.png" media="(max-width: 375px)">
               <img src="/img/index_img_08.png" alt="" />
             </picture>
           </div>

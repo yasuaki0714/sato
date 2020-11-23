@@ -1,3 +1,3 @@
-$('.nav_toggle').on('click',function() {
-  $('.nav_toggle, .nav').toggleClass('show');
+$('.headerMenuToggle').on('click',function() {
+  $('.headerMenuToggle, .headerNav').toggleClass('show');
 });
