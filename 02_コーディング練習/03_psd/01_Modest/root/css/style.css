@@ -13,7 +13,8 @@ body {
   font-weight: 600;
   letter-spacing: 0.28px;
   line-height: 26px;
-  color: #abadaf;
+  /* color: #abadaf; */
+  color: #000;
 }
 
 a:link,
@@ -64,9 +65,9 @@ headerArea Settings
   margin-left: 411px;
 }
 
-#headerArea .headerNavBlock01 ul {
+/* #headerArea .headerNavBlock01 ul {
   
-}
+} */
 
 #headerArea .headerNavBlock01 ul li {
   float: left;
@@ -110,7 +111,7 @@ headerArea Settings
 
 #headerArea .headerNavBlock01 ul li:nth-child(5) a {
   width: 50px;
-  padding: 1px 8px 3px 10px;
+  padding: 2px 8px 2px 10px;
   color: #23b7a3;
   border: 2px solid #23b7a3;
   border-radius: 3px;
@@ -119,7 +120,7 @@ headerArea Settings
 
 #headerArea .headerNavBlock01 ul li:nth-child(6) a {
   width: 50px;
-  padding: 1px 8px 3px 10px;
+  padding: 2px 8px 2px 10px;
   color: #23b7a3;
   border: 2px solid #23b7a3;
   border-radius: 3px;
@@ -128,7 +129,7 @@ headerArea Settings
 
 #headerArea .headerNavBlock01 ul li:nth-child(7) a {
   width: 50px;
-  padding: 1px 8px 3px 10px;
+  padding: 2px 8px 2px 10px;
   color: #23b7a3;
   border: 2px solid #23b7a3;
   border-radius: 3px;
@@ -154,7 +155,7 @@ heroArea Settings
 #heroArea .contentBlock01 {
   position: relative;
   top: 227px;
-  left: 99px;
+  left: 98px;
 }
 
 #heroArea .contentBlock01 .headingBlockA01 {
@@ -167,7 +168,7 @@ heroArea Settings
   font-size: 36px;
   font-weight: 700;
 }
-
+/* 
 #heroArea .contentBlock01 .headingBlockA01 .leadText {
 
 }
@@ -182,11 +183,11 @@ heroArea Settings
 
 #heroArea .contentBlock01 .btnBlockA01 ul {
   
-}
+} */
 
 #heroArea .contentBlock01 .btnBlockA01 ul li {
   float: left;
-  margin: 0px 15px 0px 0px;
+  margin: 0px 14px 0px 0px;
 }
 
 #heroArea .contentBlock01 .btnBlockA01 ul li .greenBtn {
@@ -223,9 +224,9 @@ about Settings
   width: 100%;
 }
 
-#about .aboutInner {
+/* #about .aboutInner {
 
-}
+} */
 
 #about .headingBlockB01 {
   margin: 81px 0 54px 98px;
@@ -247,14 +248,16 @@ about Settings
   float: left;
   width: 650px;
   margin: 0 0 0 8px;
+  font-weight: 200;
 }
 
-#about .contentBlock02 .missionBLock01 .missionText01 {
-
+#about .contentBlock02 .missionBlock01 .missionText01 {
+  width: 100%;
+  margin: 0 0 48px 0;
 }
 
-#about .contentBlock02 .missionBLock01 .missionText01 p {
-  margin: 0 0 26px 0;
+#about .contentBlock02 .missionBlock01 .missionText01 p {
+  margin: 0 0 25px 1px;
 }
 
 #about .contentBlock02 .missionBLock01 .snsList01 { 
@@ -265,12 +268,13 @@ about Settings
   
 }
 
-#about .contentBlock02 .missionBLock01 .snsList01 ul li {
+.contentBlock02 .missionBlock01 .snsList01 ul li {
+  width: 60px;
   float: left;
 }
 
 #about .contentBlock02 .missionBLock01 .snsList01 ul li a {
-  
+  width: 100%;
 }
 
 #about .contentBlock02 .missionBLock01 .snsList01 ul li a img {
@@ -279,18 +283,24 @@ about Settings
 
 #about .contentBlock02 .goalBlock01 {
   float: left;
+  width: 520px;
 }
 
 #about .contentBlock02 .goalBlock01 .goalList {
   
 }
 
-#about .contentBlock02 .goalBlock01 .goalList .numBlock01 {
-  
+.numBlock01 {
+  margin: 10px 0px 0px 33px;
+  padding: 13px 13px 11px 15px;
+  float: left;
+  background: #23b7a4;
+  font-size: 2rem;
 }
 
 #about .contentBlock02 .goalBlock01 .goalList .ditail {
-  
+  width: 70%;
+  float: left;
 }
 
 #about .contentBlock02 .goalBlock01 .goalList .ditail .textList {
@@ -298,7 +308,9 @@ about Settings
 }
 
 #about .contentBlock02 .goalBlock01 .goalList .ditail .textList .title {
-  
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Quattrocento', serif;
 }
 
 #about .contentBlock02 .goalBlock01 .goalList .ditail .textList .text {
