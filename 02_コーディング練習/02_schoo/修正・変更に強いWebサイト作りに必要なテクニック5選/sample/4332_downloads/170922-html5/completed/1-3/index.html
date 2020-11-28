@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>コードが荒れないCSSの書き方・更新の仕方を知ろう</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+html * {
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 700px;
+	outline: 1px solid red;
+}
+.narrow {
+	margin: 0 30px;
+}
+.wide {
+	margin: 0 -50px;
+}
+.box-container {
+	display: flex;
+	justify-content: space-between;
+}
+.item {
+	flex: 0 0 49%;
+}
+</style>
+
+</head>
+<body>
+
+<main>
+<div class="container">
+	
+	<p><code>display:block;</code>は親要素の幅いっぱいに伸縮する</p>
+	<div class="normal">
+		NORMAL BLOCK
+	</div>
+
+
+	<p>親要素よりも狭いブロックを作るときは、左右マージンを検討</p>
+	<div class="narrow base">
+		<p>狭いブロック：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde debitis repudiandae eaque ut, a cupiditate rerum quis doloribus nam animi asperiores accusamus quae sequi distinctio magnam voluptatum fugiat quo.</p>
+	</div>
+
+
+	<p>親要素よりも広いブロックを作るときは、左右にマイナスマージンを検討</p>
+	<div class="wide base">
+		<p>広いブロック：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde debitis repudiandae eaque ut, a cupiditate rerum quis doloribus nam animi asperiores accusamus quae sequi distinctio magnam voluptatum fugiat quo.</p>
+	</div>
+
+
+	<p>ボックスを並べるときはしょうがない。可能であればwidthを「%」で指定</p>
+	<div class="box-container base">
+		<div class="box1 item">
+			<p>小さいボックス1：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde debitis repudiandae eaque ut, a cupiditate rerum quis doloribus nam animi asperiores accusamus quae sequi distinctio magnam voluptatum fugiat quo.</p>
+		</div>
+		<div class="box2 item">
+			<p>小さいボックス2：Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic unde debitis repudiandae eaque ut, a cupiditate rerum quis doloribus nam animi asperiores accusamus quae sequi distinctio magnam voluptatum fugiat quo.</p>
+		</div>
+	</div>
+
+
+</div>
+</main>
+
+</body>
+</html>

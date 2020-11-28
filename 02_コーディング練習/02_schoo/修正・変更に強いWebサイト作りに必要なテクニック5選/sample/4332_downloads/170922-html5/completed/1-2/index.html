@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>継承・カスケード・詳細度</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body { font-family: sans-serif;}
+
+
+
+#title {
+	color: gray;
+}
+
+.title {
+	color: red;
+}
+
+.title {
+	color: blue;
+}
+/*
+style属性 ×
+
+#id　×
+
+.class / [target="_blank"] / :hover　◎
+
+h2 / p / ::before / ::after　△
+
+.list
+ul.list
+.contents ul.list 
+
+table tr td.price
+.price
+table .price
+td.price
+*/
+</style>
+</head>
+<body>
+
+<div class="contents">
+	<h2 class="title" id="title">分別方法</h2>
+	<ul class="list">
+		<li>ビン</li>
+		<li>カン</li>
+		<li>ペットボトル</li>
+	</ul>
+</div>
+
+<p>継承：<a href="https://www.w3.org/TR/CSS22/propidx.html" target="_blank">https://www.w3.org/TR/CSS22/propidx.html</a></p>
+</body>
+</html>
