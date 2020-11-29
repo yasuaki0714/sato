@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*　制作時チェック用 */
+main {
+  width: 100%;
+  height: 600vh;
+  background: aqua;
+}
+
+main section {
+  height: 100vh;
+  font-size: 10rem;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+main section:nth-of-type(2n) {
+  background-color: blue;
+}
+
+
+
+/*========================================
+basic configuration
+========================================*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.0rem;
+  font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  line-height: 1.68;
+  letter-spacing: 0;
+  color: #1e1e1e;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+/* img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+} */
+
+
+/*========================================
+header Settings
+========================================*/
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 10px 0px 6px 20px;
+}
+
+header .headerInner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+header .logo {
+  width: 165px;
+}
+
+header nav {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 34.5%;
+}
+
+header nav .headerNav {
+  margin-right: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+header nav .headerNav li {
+  margin-right: 24px;
+}
+
+header nav .headerNav li:last-child {
+  margin-right: 0;
+}
+
+header nav .headerNav li a {
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+
+header nav .headerBtnBlock01 {
+
+}
+
+header nav .headerBtnBlock01 ul {
+  display: flex;
+}
+
+header nav .headerBtnBlock01 ul {
+  /* background-color: orange; */
+}
+
+.contactBtn a {
+
+}
+
+.contactBtn a {
+  padding: 4px 16px 3px 36px;
+  background: orange url("/images/ico-mail_white.svg") left 0.8rem center no-repeat;
+  border: 1px solid orange;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.telBtn a {
+  padding: 4px 13px 0px 24px;
+  background: url(/images/ico-tel.svg) left 0.8rem center no-repeat;
+  border: 2px solid #19a78e;
+  border-radius: 20px;
+  color: #19a78e;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+
+
+/* ページトップボタン */
+#pageTopBtn {
+  width: 60px;
+  height: 60px;
+  background: rgba(25, 167, 142, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10;
+  bottom: 4.5rem;
+  right: 50px;
+}
+
+#pageTopBtn:hover {
+  background: rgba(25, 167, 142, 0.5);
+}
+
+#pageTopBtn a {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pageTopBtn a img {
+  width: 24px;
+  height: 24px;
+}
