@@ -367,7 +367,7 @@ buttonBlockA01
     color: white;
     font-size: 20px;
   }
-  
+
   .button>img {
     width: 20px;
   }
@@ -379,7 +379,7 @@ buttonBlockA01
 }
 
 /* ハンバーガーメニュー */
-.headerMenuWrap {
+#headerMenuWrap {
   width: 100%;
   position: fixed;
   z-index: 2;
@@ -387,16 +387,19 @@ buttonBlockA01
   color: #fff;
 }
 
-.headerMenu {
-  max-width: 1000px;
+#headerMenu {
+  max-width: 960px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.togglrWrapper {
+  padding: 15px;
 }
 
 .headerMenuToggle {
   display: block;
   position: relative;
-  top: 51px;
-  left: 94%;
   width: 2.5rem;
   height: 1.5rem;
 }
@@ -441,9 +444,9 @@ buttonBlockA01
 }
 
 .headerNav {
-  position: relative;
-  top: 58px;
-  right: 4%;
+  position: absolute;
+  top: 54px;
+  right: 0%;
   padding: 1rem;
   opacity: 0;
   display: none;
@@ -456,21 +459,23 @@ buttonBlockA01
   color: #fff;
   font-size: 22px;
   font-weight: bold;
+  border-bottom: 2px solid #fff;
 }
 
 .headerNav.show {
-  height: 80vh;
+  height: 27vh;
   opacity: 1;
   display: block;
+}
+
+.colorChange {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 
 @media screen and (max-width:375px) {
   .headerMenuToggle {
     display: block;
-    position: relative;
-    top: 23px;
-    left: 86%;
     width: 2.5rem;
     height: 1.5rem;
   }
@@ -480,6 +485,14 @@ buttonBlockA01
     height: 80vh;
     opacity: 1;
     display: block;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    text-align: center;
+  }
+
+  .show ul li {
+    margin-bottom: 40px;
   }
 
   header .logoBlock01 {
