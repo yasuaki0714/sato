@@ -21,21 +21,27 @@ $(function(){
   })
 });
 
-// カルーセル
-$(function(){
-  $('.center-item').slick({
-    infinite: true,
-    dots: true,
-    arrows: true,
-    slidesToshow: 1,
-    centerMode: true,
-    centerPadding: '100px',
-    autoplay: true,
-    responsive: [{
-      breakpoint: 480,
-      settings: {
-        enterMode: false,
-      }
-    }]
-  });
+
+$('.slick01').slick({
+  dots: true,
+  // autoplay: true,
+  // autoplaySpeed: 500,
+  centerMode: true,
+  centerPadding: '80px',
+});
+
+$('.slick02').slick({
+  dots: true,
+  infinite: false,
+  centerPadding: '50px',
+  slidesToShow: 3,
+  slidesToScroll: 3,
+});
+
+$('.slick03').slick({
+  dots: true,
+  infinite: false,
+  centerPadding: '50px',
+  slidesToShow: 2,
+  slidesToScroll: 2,
 });

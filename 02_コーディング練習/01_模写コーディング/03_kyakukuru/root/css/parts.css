@@ -1,0 +1,421 @@
+@charset 'utf-8';
+
+.partsInner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sumple {
+  width: 100%;
+  height: 500px;
+  background: #333;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+
+/*========================================
+Heading Parts Settings
+========================================*/
+/* h2 */
+.headingBlock01 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.headingBlock01 > h2 {
+  display: inline-block;
+  position: relative;
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 38.5px;
+}
+
+.headingBlock01 > h2::before {
+  display: block;
+  width: 150px;
+  height: 8px;
+  content: "";
+  background: url(/images/bg-pattern.png) no-repeat;
+  position: absolute;
+  left: -200px;
+  top: 15px;
+}
+
+.headingBlock01 > h2::after {
+  display: block;
+  width: 150px;
+  height: 8px;
+  content: "";
+  background: url(/images/bg-pattern.png) no-repeat;
+  position: absolute;
+  right: -200px;
+  top: 15px;
+}
+
+.headingBlock01 .englishSub {
+  color: #fbb731;
+  font-size: 2.0rem;
+  line-height: 20px;
+}
+
+
+/*========================================
+Bottun Parts Settings
+========================================*/
+/* No.01 */
+.btnList01 {
+  width: 50%;
+  display: flex;
+}
+
+.btnList01 > li {
+  position: relative;
+  margin-right: 15px;
+}
+
+.btnList01 > li > a {
+  display: block;
+  width: 10em;
+  padding: 15px 45px 15px 25px;
+  background-color: #19a78e;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+
+.btnList01 > li > a::before {
+  border-radius: 50%;
+  display: block;
+  content: "";
+  width: 2.8rem;
+  height: 2.8rem;
+  background: #fff;
+  position: absolute;
+  right: 9px;
+  top: calc(50% - 1.4rem);
+}
+
+.btnList01 > li > a::after {
+  display: block;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url("/images/ico-allow-yellow.svg") no-repeat;
+  position: absolute;
+  right: 13px;
+  top: calc(50% - 0.7rem);
+}
+
+.btnList01 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+/* No.02 */
+.btnList02 {
+  display: flex;
+}
+
+.btnList02 > li {
+  
+}
+
+.btnList02 > li > a {
+  display: block;
+  width: 356px;
+  padding: 12px 20px 12px 20px;
+  border: 2px solid #19a78e;
+  border-radius: 30px;
+  color: #19a78e;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btnList02 > li > a::after {
+  content: ">";
+}
+
+.btnList02 > li > a:hover {
+  text-decoration: underline;
+  color: #fff;
+  background: #19a78e;
+}
+
+/* No.03 */
+.btnList03 {
+  width: 50%;
+  display: flex;
+}
+
+.btnList03 > li {
+  position: relative;
+  margin-right: 15px;
+}
+
+.btnList03 > li > a {
+  display: block;
+  width: 8em;
+  padding: 12px 35px 12px 20px;
+  background-color: #19a78e;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+
+.btnList03 > li > a::after {
+  display: block;
+  content: "";
+  width: 2.6rem;
+  height: 2.6rem;
+  background: url(/images/ico-allow-white.svg) no-repeat;
+  position: absolute;
+  right: 13px;
+  top: calc(50% - 1.3rem);
+  transform: rotate(90deg);
+}
+
+.btnList03 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+/* No.04 */
+.btnList04 {
+  width: 50%;
+  display: flex;
+}
+
+.btnList04 > li {
+  position: relative;
+  margin-right: 15px;
+}
+
+.btnList04 > li:first-child > a {
+  display: block;
+  box-sizing: border-box;
+  width: 11em;
+  padding: 4px 16px 3px 40px;
+  background-color: #fbb731 ;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fbb731;
+  border-radius: 20px;
+}
+
+.btnList04 > li:first-child > a::before {
+  display: block;
+  content: "";
+  width: 2.6rem;
+  height: 1.6rem;
+  background: url("/images/ico-mail_white.svg") no-repeat;
+  position: absolute;
+  left: 13px;
+  top: calc(50% - 0.8rem);
+}
+
+.btnList04 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.btnList04 > li:last-child > a {
+  display: block;
+  box-sizing: border-box;
+  width: 11em;
+  padding: 4px 16px 3px 28px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #19a78e;
+  text-align: center;
+  border: 1px solid #19a78e;
+  border-radius: 20px;
+}
+
+.btnList04 > li:last-child > a::before {
+  display: block;
+  content: "";
+  width: 2.6rem;
+  height: 2.0rem;
+  background: url("/images/ico-tel.svg") no-repeat;
+  position: absolute;
+  left: 13px;
+  top: calc(50% - 1.0rem);
+}
+
+.btnList04 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+/*========================================
+Card Parts Settings
+========================================*/
+/* No.01 */
+.cardBlock01 {
+  width: 350px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cardBlock01 > .inner {
+  display: block;
+}
+
+.cardBlock01 > a:hover {
+  opacity: 0.9;
+}
+
+.cardBlock01 > a:hover > p {
+  text-decoration: underline;
+}
+
+.cardBlock01 > .inner > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cardBlock01 > .inner > p {
+  margin-bottom: 20px;
+}
+
+.cardBlock01 > .inner > .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardBlock01 > .inner > .date > p {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 1.4rem;
+  color: #19a78e;
+  border: 1px solid #19a78e;
+  border-radius: 3px;
+}
+
+/* No.02 */
+.cardBlock02 {
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #fff;
+}
+
+.cardBlock02 > .inner {
+  display: flex;
+}
+
+.cardBlock02 > a:hover {
+  opacity: 0.9;
+}
+
+.cardBlock02 > a:hover > .text > p {
+  text-decoration: underline;
+}
+
+.cardBlock02 > .inner > img {
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cardBlock02 > .inner > .text {
+  padding: 0 20px;
+}
+
+.cardBlock02 > .inner > .text > p {
+  margin-bottom: 20px;
+}
+
+.cardBlock02 > .inner > .text > .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardBlock02 > .inner > .text > .date > p {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+
+/*========================================
+BOX Parts Settings
+========================================*/
+/* No.01 */
+.box01 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-top: 8px solid #fbb731;
+  box-shadow: 1px 1px 10px #000 ;
+}
+
+.box01 > .title {
+
+}
+
+.box01 > .title > h2{
+  padding: 20px 0;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.box01 > .inner {
+  padding: 30px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 20px #19a78e;
+}
+
+.box01 > .inner > .boxContent01 {
+  padding-bottom: 15px;
+  border-bottom: 3px dotted #ccc;
+}
+
+.box01 > .inner > .boxContent01:last-child {
+  border: none;
+}
+
+/*========================================
+BOX Parts Settings
+========================================*/
+/* No.01 */
+.colmun2Block01 {
+  display: flex;
+}
+
+.colmun2Block01 > .colmunitem {
+  width: 50%;
+}
+
+/* No.02 */
+.colmun2Block02 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colmun2Block02 > .colmunitem {
+  width: 48%;
+}
+
+
+/*========================================
+Carousel Parts Settings
+========================================*/
+/* slick01
+----------------------------------------*/
+
+
+
