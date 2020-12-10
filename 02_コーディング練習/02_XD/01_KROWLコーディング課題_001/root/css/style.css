@@ -96,7 +96,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;  
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -147,6 +147,11 @@ a:active {
   text-decoration: none;
 }
 
+@media screen and (max-width:767px){
+  .inner {
+    width: 100%;
+  }
+}
 
 /*=======================================
 headerArea Settings
@@ -157,6 +162,7 @@ headerArea Settings
 }
 
 #headerArea .logoBlock01 {
+  display: inline-block;
   color: #fff;
   font-size: 32px;
 }
@@ -169,6 +175,13 @@ headerArea Settings
   margin: 0 0 0 8px;
   font-size: 20px;
   color: #fff;
+}
+
+@media screen and (max-width:767px){
+  #headerArea .inner {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
@@ -188,6 +201,7 @@ contentArea Settings
 }
 
 #contentArea .headingBlockA01 {
+  display: inline-block;
   font-size: 24px;
   margin: 2px 0px 16px 5px;
 }
@@ -215,6 +229,22 @@ contentArea Settings
   font-size: 24px;
   border-bottom: 2px solid;
   vertical-align: baseline;
+}
+
+@media screen and (max-width:767px) {
+  #contentArea .imgBlockA01 {
+    display: block;
+    width: 100%;
+  }
+
+  #contentArea .imgBlockA01 .img img {
+    width: 100%;
+  }
+
+  #contentArea .imgBlockA01 .text {
+    width: 100%;
+    margin: 30px 0 50px 0;
+  }
 }
 
 

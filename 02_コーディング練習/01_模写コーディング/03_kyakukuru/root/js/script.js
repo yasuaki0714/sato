@@ -27,7 +27,7 @@ $('.slick01').slick({
   // autoplay: true,
   // autoplaySpeed: 500,
   centerMode: true,
-  centerPadding: '80px',
+  centerPadding: '10%',
 });
 
 $('.slick02').slick({

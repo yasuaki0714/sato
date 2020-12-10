@@ -25,6 +25,7 @@ ul {
 header Settings
 ================================*/
 #header {
+  position: relative;
   background: url("/image/index_bg_01.png") 0 0 no-repeat;
   background-size: cover;
   width: 100%;
@@ -37,12 +38,24 @@ header Settings
   left: 60px
 }
 
+@media screen and (max-width:767px) {
+  #header {
+    background-position: center;
+    height: 50vh;
+  }
+
+  #header .logoBlock01 {
+    position: absolute;
+    left: calc(50% - 148px);
+  }
+}
+
 
 /*================================
 section01 Settings
 ================================*/
 #section01 {
-  padding: 100px 0 94px;
+  padding: 100px 15px 94px;
 }
 
 #section01 .headingBlockA01 {
@@ -79,7 +92,7 @@ section02 Settings
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 
 #section02 .imgBlockA01,
@@ -98,16 +111,43 @@ section02 Settings
   line-height: 1.75;
 }
 
-/* #section02 .imgBlockA01 .text p,
-#section02 .imgBlockA02 .text p {
-  margin-bottom: 1px;
-} */
-
 #section02 .imgBlockA01 .text .title,
 #section02 .imgBlockA02 .text .title {
   margin: 0 0 6px 0;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media screen and (max-width:767px) {
+  #section02 .headingBlockA02 {
+    color: #000;
+  }
+
+  #section02 .sectionInner {
+    width: 100%;
+    padding: 0;
+  }
+
+  #section02 .imgBlockA01,
+  #section02 .imgBlockA02 {
+    display: block;
+  }
+
+  #section02 .imgBlockA01 .img,
+  #section02 .imgBlockA02 .img {
+    width: 100%;
+  }
+
+  #section02 .imgBlockA01 .img img,
+  #section02 .imgBlockA02 .img img {
+    width: 100%;
+  }
+
+  #section02 .imgBlockA01 .text,
+  #section02 .imgBlockA02 .text {
+    padding: 37px 20px 30px 21px;
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
 
 
@@ -142,6 +182,31 @@ section03 Settings
   justify-content: space-between;
 }
 
+@media screen and (max-width:767px) {
+  #section03 .sectionInner {
+    width: 100%;
+  }
+
+  #section03 .culmun4BlockA01 {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #section03 .culmun4BlockA01 div {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+
+  #section03 .culmun4BlockA01 div:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  #section03 .culmun4BlockA01 div a img {
+    width: 100%;
+  }
+}
+
 
 /*================================
 footer Settings
@@ -155,15 +220,6 @@ footer Settings
   color: #fff;
 }
 
-#footer #copyright {
-  position: absolute;
-  left: 45%;
-  top: 42%;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.0;
-}
-
 #footer .footerList01 {
   margin-right: 194px;
 }
@@ -174,6 +230,7 @@ footer Settings
 
 #footer .footerList01 ul li {
   line-height: 1.0;
+  display: inline-block;
 }
 
 #footer .footerList01 ul li:not(:last-child) {
@@ -183,4 +240,51 @@ footer Settings
 #footer .footerList01 ul li a {
   font-size: 1.2rem;
   color: #fff;
+}
+
+#footer #copyright {
+  position: absolute;
+  left: 45%;
+  top: 42%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.0;
+}
+
+@media screen and (max-width:767px) {
+  #footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer .footerList01 {
+    margin-right: 0px;
+  }
+
+  #footer .footerList01 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #footer .footerList01 ul li {
+    text-align: center;
+    margin: 0 0 30px;
+  }
+
+  #footer .footerList01 ul li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  #footer .footerList01 ul li a {
+    font-size: 1.6rem;
+  }
+
+  #footer #copyright {
+    position: static;
+    left: auto;
+    top: auto;
+    text-align: center;
+  }
+
 }
