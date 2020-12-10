@@ -12,7 +12,6 @@ headingBlock
   letter-spacing: 1.8px;
 }
 
-
 .headingBlockA02 {
   margin: 0 0 50px 0;
   text-align: center;
@@ -40,13 +39,13 @@ headingBlock
 
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
   .headingBlockA01 {
     margin: 37px 0 50px 6px;
     text-align: center;
 }
 
-  .headingBlockA01 h2::before, 
+  .headingBlockA01 h2::before,
   .headingBlockA01 h2::before {
     content: "";
     position: absolute;
@@ -57,7 +56,7 @@ headingBlock
     height: 1px;
     transform: translate(-50%);
     background-color: #666666;
-  } 
+  }
 
   .headingBlockA01 h2, .headingBlockA02 h2 {
     display: inline-block;
@@ -89,7 +88,7 @@ textBlock
 
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
   .textBlockA01 {
     text-align: center;
     line-height: 22px;
@@ -104,7 +103,7 @@ textBlock
 imageBlock
 =============================*/
 .imageBlockA01 {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
@@ -129,7 +128,7 @@ imageBlock
   font-weight: 600;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
   .imageBlockA01 {
     width: 100%;
     margin: -25px 0 0 0;
@@ -230,7 +229,7 @@ columnBlock
 /*column3Block
 -----------------------------*/
 .column3BlockA01 {
-  width: 960px;
+  width: 100%;
   display: flex;
 }
 
@@ -248,7 +247,7 @@ columnBlock
 }
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
   .column2BlockA01>div:nth-child(2n)>div {
     margin-left: auto;
   }
@@ -318,7 +317,7 @@ columnBlock
   .column2BlockB01>.item,
   .column3BlockA01>.item {
     width: 100%;
-    margin: 33px 0 0 8px;
+    margin: 33px 0 0 0;
     padding: 0;
   }
 
@@ -340,15 +339,18 @@ buttonBlockA01
   margin: 0 auto;
 }
 
-.button {
+.buttonBlockA01 > p > .button {
   display: flex;
   align-items: center;
   border: 1px solid #a0a0a0;
   background-color: #fff;
   margin: -19px 0 0 -3px;
   padding: 26px 97px 22px 97px;
-  color: white;
   font-size: 20px;
+}
+
+.buttonBlockA01 > p > .button > img {
+  width: 30px;
 }
 
 .button>span {
@@ -356,15 +358,14 @@ buttonBlockA01
 }
 
 
-@media screen and (max-width:375px) {
-  .button {
+@media screen and (max-width:768px) {
+  .buttonBlockA01 > p > .button {
     display: flex;
     align-items: center;
     border: 1px solid #a0a0a0;
     background-color: #fff;
     margin: -19px 0 0 -3px;
-    padding: 6px 62px 7px 50px;
-    color: white;
+    padding: 6px 10px 7px 10px;
     font-size: 20px;
   }
 
@@ -388,7 +389,8 @@ buttonBlockA01
 }
 
 #headerMenu {
-  max-width: 960px;
+  width: 76%;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -473,7 +475,7 @@ buttonBlockA01
 }
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:768px) {
   .headerMenuToggle {
     display: block;
     width: 2.5rem;
