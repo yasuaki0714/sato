@@ -3,7 +3,15 @@
 .partsInner {
   width: 1200px;
   margin: 0 auto;
+  padding-bottom: 5000px;
 }
+
+@media screen and (max-width:767px){
+  .partsInner{
+    width: 100%;
+  }
+}
+
 
 .sumple {
   width: 100%;
@@ -66,18 +74,22 @@ Bottun Parts Settings
 ========================================*/
 /* No.01 */
 .btnList01 {
-  width: 50%;
   display: flex;
+  justify-content: center;
 }
 
 .btnList01 > li {
+  display: inline-block;
   position: relative;
+}
+
+.btnList01 > li:not(:last-child) {
   margin-right: 15px;
 }
 
 .btnList01 > li > a {
-  display: block;
-  width: 10em;
+  display: inline-block;
+  min-width: 10em;
   padding: 15px 45px 15px 25px;
   background-color: #19a78e;
   border-radius: 30px;
@@ -114,9 +126,24 @@ Bottun Parts Settings
   opacity: 0.5;
 }
 
+@media screen and (max-width:767px) {
+  .btnList01 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .btnList01 > li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+
 /* No.02 */
 .btnList02 {
   display: flex;
+  justify-content: center;
 }
 
 .btnList02 > li {
@@ -125,7 +152,7 @@ Bottun Parts Settings
 
 .btnList02 > li > a {
   display: block;
-  width: 356px;
+  min-width: 10em;
   padding: 12px 20px 12px 20px;
   border: 2px solid #19a78e;
   border-radius: 30px;
@@ -143,6 +170,16 @@ Bottun Parts Settings
   color: #fff;
   background: #19a78e;
 }
+
+@media screen and (max-width:767px) {
+  .btnList02 > li > a {
+    padding: 12px 10px 12px 10px;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #19a78e;
+  }
+}
+
 
 /* No.03 */
 .btnList03 {
@@ -174,7 +211,7 @@ Bottun Parts Settings
   background: url(/images/ico-allow-white.svg) no-repeat;
   position: absolute;
   right: 13px;
-  top: calc(50% - 1.3rem);
+  top: 9px;
   transform: rotate(90deg);
 }
 
@@ -192,6 +229,7 @@ Bottun Parts Settings
 .btnList04 > li {
   position: relative;
   margin-right: 15px;
+  min-width: 5em;
 }
 
 .btnList04 > li:first-child > a {
@@ -216,7 +254,7 @@ Bottun Parts Settings
   background: url("/images/ico-mail_white.svg") no-repeat;
   position: absolute;
   left: 13px;
-  top: calc(50% - 0.8rem);
+  top: 9px;
 }
 
 .btnList04 > li > a:hover {
@@ -245,12 +283,23 @@ Bottun Parts Settings
   background: url("/images/ico-tel.svg") no-repeat;
   position: absolute;
   left: 13px;
-  top: calc(50% - 1.0rem);
+  top: 7px;
 }
 
 .btnList04 > li > a:hover {
   text-decoration: underline;
   opacity: 0.5;
+}
+
+@media screen and (max-width:767px) {
+  .btnList04 {
+    width: 100%;
+    display: block;
+  }
+
+  .btnList04 > li:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 /*========================================
@@ -410,12 +459,91 @@ BOX Parts Settings
   width: 48%;
 }
 
+/*========================================
+hero Settings
+========================================*/
+.heroBlock {
+  position: relative;
+  width: 100%;
+}
+
+.heroBlock .heroTextBlock {
+  width: 540px;
+  padding: 20px 25px 25px;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 3.6rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.heroBlock .heroTextBlock > .title {
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
+.heroBlock .heroTextBlock > .lead {
+  font-size: 3.3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width:767px) {
+  .heroBlock .heroTextBlock {
+    width: 314px;
+    padding: 20px 13px 25px;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+  }
+
+  .heroBlock .heroTextBlock > .title {
+    font-size: 3.1rem;
+    font-weight: bold;
+  }
+
+  .heroBlock .heroTextBlock > .lead {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .heroBlock .heroTextBlock .heroBtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .heroBlock .heroImg {
+    width: 100%;
+  }
+}
 
 /*========================================
 Carousel Parts Settings
 ========================================*/
 /* slick01
 ----------------------------------------*/
+.slick-arrow.prev {
+  position: absolute;
+  top: 50%;
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5000;
+}
 
+.slick-arrow.next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5000;
+}
 
-
+.mypattern .slick-slide:not(.slick-center) {
+  filter: opacity(60%);
+  transition: 0.2s linear;
+}

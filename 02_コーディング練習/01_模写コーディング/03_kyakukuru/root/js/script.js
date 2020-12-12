@@ -24,10 +24,21 @@ $(function(){
 
 $('.slick01').slick({
   dots: true,
+  arrows: true,
+  prevArrow:'<div class="prev">＜</div>',
+	nextArrow:'<div class="next">＞</div>',
   // autoplay: true,
   // autoplaySpeed: 500,
   centerMode: true,
-  centerPadding: '10%',
+  centerPadding: '5%',
+  responsive: [{
+    breakpoint: 768,
+    settings: {
+      arrows: false,
+      centerMode: false,
+      centerPadding: '0',
+    }
+  }]
 });
 
 $('.slick02').slick({
