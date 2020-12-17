@@ -68,6 +68,45 @@ Heading Parts Settings
   line-height: 20px;
 }
 
+@media screen and (max-width:767px) {
+  .headingBlock01 > h2 {
+    font-size: 2.5rem;
+  }
+
+  .headingBlock01 > h2::before {
+    width: 100px;
+    height: 6px;
+    left: -110px;
+    top: 15px;
+  }
+
+  .headingBlock01 > h2::after {
+    width: 100px;
+    height: 6px;
+    right: -110px;
+    top: 15px;
+  }
+
+  .headingBlock01 .englishSub {
+    font-size: 1.4rem;
+  }
+}
+
+/*========================================
+Text Parts Settings
+========================================*/
+.textBlock01 {
+
+}
+
+.textBlock01 > p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.textBlock01 > p:not(:last-child) {
+  margin: 30px;
+}
 
 /*========================================
 Bottun Parts Settings
@@ -302,6 +341,81 @@ Bottun Parts Settings
   }
 }
 
+/* No.05 */
+.btnList05 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btnList05 > li {
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+  min-width: 5em;
+}
+
+.btnList05 > li:first-child > a {
+  display: block;
+  box-sizing: border-box;
+  width: 11em;
+  padding: 8px 16px 7px 40px;
+  background-color: #fbb731 ;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #fbb731;
+  border-radius: 20px;
+}
+
+.btnList05 > li:first-child > a::before {
+  display: block;
+  content: "";
+  width: 2.6rem;
+  height: 1.6rem;
+  background: url("/images/ico-mail_white.svg") no-repeat;
+  position: absolute;
+  left: 13px;
+  top: 11px;
+}
+
+.btnList05 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+.btnList05 > li:last-child > a {
+  display: block;
+  box-sizing: border-box;
+  width: 11em;
+  padding: 8px 16px 7px 28px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #19a78e;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #19a78e;
+  border-radius: 20px;
+}
+
+.btnList05 > li:last-child > a::before {
+  display: block;
+  content: "";
+  width: 2.6rem;
+  height: 2.0rem;
+  background: url("/images/ico-tel.svg") no-repeat;
+  position: absolute;
+  left: 13px;
+  top: 11px;
+}
+
+.btnList05 > li > a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
+
 /*========================================
 Card Parts Settings
 ========================================*/
@@ -514,7 +628,7 @@ hero Settings
     justify-content: center;
   }
 
-  .heroBlock .heroImg {
+  .heroBlock .heroImg > img {
     width: 100%;
   }
 }
@@ -529,8 +643,9 @@ Carousel Parts Settings
   top: 50%;
   font-size: 4.2rem;
   font-weight: bold;
-  color: #fff;
+  color: #ccc;
   z-index: 5000;
+  cursor: pointer;
 }
 
 .slick-arrow.next {
@@ -539,11 +654,233 @@ Carousel Parts Settings
   right: 0;
   font-size: 4.2rem;
   font-weight: bold;
-  color: #fff;
+  color: #ccc;
   z-index: 5000;
+  cursor: pointer;
 }
 
 .mypattern .slick-slide:not(.slick-center) {
-  filter: opacity(60%);
+  filter: grayscale(0);
   transition: 0.2s linear;
 }
+
+.slick-dots {
+  bottom: 0;
+  z-index: 3000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #19a78e;
+}
+
+.slick-dots li button:before {
+  color: #19a78e;
+}
+
+@media screen and (max-width:767px) {
+  .slick-dots {
+    bottom: -25px;
+  }
+}
+
+/* slick02
+----------------------------------------*/
+.slick02 {
+  margin-top: 50px;
+}
+
+.slick02 .slick-slide {
+  width: 400px;
+}
+
+/*========================================
+検索　虫眼鏡 Settings
+========================================*/
+.spMenu {
+  display: flex;
+}
+
+
+.surchBtnWrap {
+  position: relative;
+}
+
+.surchBtn {
+  width: 5.0rem;
+  height: 5.0rem;
+  cursor: pointer;
+}
+
+.surchBtn::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.surchBtn::after {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 6px;
+  top: calc(50% + 6px);
+  left: calc(50% + 2px);
+  border-top: solid 2px #333;
+  transform: rotate(45deg);
+}
+
+
+
+.surchMordal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+  right: 0%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity .5s, visibility .5s;
+  z-index: 8000;
+}
+
+.surchMordal.show {
+  display: block;
+  position: fixed;
+}
+
+.surchMordal #searchform {
+  position: relative;
+  top: 35%;
+  left: calc(50% - 125px);
+}
+
+.surchMordal #searchform > input {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 2.0rem;
+}
+
+.surchMordal #searchform > button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  border: none;
+  background: none;
+  position: relative;
+  right: 11%;
+}
+
+.surchMordal #searchform > button > .surchBtn::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 15px);
+  left: calc(50% - 9px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.surchMordal #searchform > button > .surchBtn::after {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 6px;
+  top: calc(50% - 1px);
+  left: calc(50% + 2px);
+  border-top: solid 2px #333;
+  transform: rotate(45deg);
+}
+
+
+/*========================================
+ハンバーガーメニュー Settings
+========================================*/
+/* ハンバーガーメニュー */
+.open {
+  display: block;
+}
+
+.open.show {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.close.show {
+  display: block;
+}
+
+
+
+
+.toggleWrapper {
+  padding: 15px;
+}
+
+.spMenuToggle {
+  display: block;
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.spMenuToggle:hover {
+  cursor: pointer;
+}
+
+.spNav {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  right: 0%;
+  opacity: 0;
+  display: none;
+  transition: opacity .5s, visibility .5s;
+  z-index: 8000;
+}
+
+.spNav > ul {
+  width: 100%;
+}
+
+.spNav > ul >li {
+  position: relative;
+  margin: 0;
+  padding: 15px;
+  background: #19a78e;
+  border-bottom: 1px solid #ccc;
+  opacity: 0.9;
+}
+
+.spNav > ul >li > a {
+  font-size: 2.0rem;
+  color: #fff;
+  padding-left: 35px;
+}
+
+.spNav > ul >li > a::before {
+  content: "";
+  width: 3.6rem;
+  height: 3.6rem;
+  background: url("/images/ico-allow-white.svg") 0 0 no-repeat;
+  position: absolute;
+  top: 1.8rem;
+  left: 0.2rem;
+  transform: rotate(90deg);
+}
+
+.spNav.show {
+  height: 27vh;
+  opacity: 1;
+  display: block;
+}
+

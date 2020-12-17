@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cresta Design</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/slick.css">
+  <link rel="stylesheet" href="/css/slick-theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+  <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+  <header class="header">
+    <div class="inner">
+      <div class="logo">
+        <p>Cresta Design</p>
+      </div><!-- / .logo -->
+      <nav class="headerNav">
+        <ul>
+          <li><a href="/index.html#CONCEPT">Concept</a></li>
+          <li><a href="/index.html#Service">Service</a></li>
+          <li><a href="/index.html#Works">Works</a></li>
+          <li><a href="/index.html#Contact">Contact</a></li>
+        </ul>
+      </nav><!-- / .headerNav -->
+    </div>
+  </header><!-- / .header -->
+  <section id="contact">
+    <div class="sectionHeader">
+      <div class="headingBlockC01">
+        <h1>Contact</h1>
+      </div><!-- / .headingBlockC01 -->
+      <div class="bgBlockC01">
+        <p>Contact us</p>
+      </div><!-- / .bgBlockC01 -->
+    </div>
+    <div class="formArea">
+      <form method="GET" action="result.html">
+        <p>お問い合わせ内容</p>
+        <ul class="checkbox">
+          <li><input type="checkbox" name="matter" value="documentRequest" id="documentRequest"><label for="documentRequest">資料請求</label></li>
+          <li><input type="checkbox" name="matter" value="telRequest" id="telRequest"><label for="telRequest">お電話でのご相談を希望</label></li>
+          <li><input type="checkbox" name="matter" value="application" id="application"><label for="application">申し込み</label></li>
+        </ul>
+        <div class="inputBox">
+          <p>担当者名</p>
+          <div><input type="text" name="name" id="naem"></div>
+        </div>
+        <div class="inputBox">
+          <p>電話番号</p>
+          <div><input type="text" name="tel" id="tel"></div>
+        </div>
+        <div class="inputBox">
+          <p>メールアドレス</p>
+          <div><input type="text" name="mail" id="mail"></div>
+        </div>
+        <div class="inoutBox">
+          <p>その他</p>
+          <div>
+            <textarea name="other" id="other" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="btnBlockA01">
+          <div class="btn">
+            <p><input type="submit" value="submit"></p>
+          </div>
+        </div><!-- / .btnBlockA01 -->
+      </form>
+    </div><!-- / #formArea -->
+  </section>
+  <footer>
+    <p class="copyright">&copy;cresta.design all rights reserved</p>
+  </footer>
+</body>
+</html>
