@@ -17,14 +17,14 @@ body {
   font-size: 1.6rem;
   line-height: 1.88;
   letter-spacing: 0.05em;
-  color: #171717;
+  color: #282F35;
 }
 
 a:link,
 a:hover,
 a:visited,
 a:active {
-  color: #171717;
+  color: #282F35;
   text-decoration: none;
 }
 
@@ -39,12 +39,15 @@ img {
   position: relative;
 }
 
-@media screen and (max-width: 767px){
-  .inner {
-    width: auto;
-    padding: 15px;
-  }
+
+.pc {
+  display: block;
 }
+
+.sp {
+  display: none;
+}
+
 
 /*==============================
 Header Settings
@@ -64,7 +67,7 @@ header.fixed {
   background: #282f35;
 }
 
-header > .inner {
+header .inner {
   display: flex;
   justify-content: space-between;
 }
@@ -81,7 +84,7 @@ header .logo p {
 }
 
 header .headerNavToggle {
-  /* display: none; */
+  display: none;
 }
 
 header .headerNav {
@@ -109,58 +112,8 @@ header .headerNav ul li a:hover {
 }
 
 
-@media screen and (max-width: 767px){
-  .headerNavToggle {
-    display: block;
-    position: relative;
-    width: 2.5rem;
-    height: 1.5rem;
-  }
-  
-  .headerNavToggle:hover {
-    cursor: pointer;
-  }
-  
-  .headerNavToggle i {
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    transition: transform .5s, opacity .5s;
-  }
-  
-  .headerNavToggle i:nth-child(1) {
-    top: 0;
-  }
-  
-  .headerNavToggle i:nth-child(2) {
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  
-  .headerNavToggle i:nth-child(3) {
-    bottom: 0;
-  }
-  
-  .headerNavToggle.show i:nth-child(1) {
-    transform: translateY(10px) rotate(-45deg);
-  }
-  
-  .headerNavToggle.show i:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .headerNavToggle.show i:nth-child(3) {
-    transform: translateY(-12px) rotate(45deg);
-  }
-}
-
-
-
 /*==============================
-Headre Settings
+firstViewArea Settings
 ==============================*/
 #firstViewArea .inner {
   position: relative;
@@ -375,7 +328,7 @@ Service Settings
 }
 
 #Service .headingBlockB01 {
-  margin-bottom: 70px;
+  margin: 0 0 70px 15px;
 }
 
 #Service .headingBlockB01 h2 {
@@ -398,14 +351,20 @@ Service Settings
 
 #Service .culmun3BlockB01 {
   display: flex;
-  margin-top: -96px;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
+  width: 100%;
 }
 
 #Service .culmun3BlockB01 .item {
   width: calc(100% / 3);
   position: relative;
+}
+
+#Service .culmun3BlockB01 .item .itemInner {
+  display: block;
+}
+
+#Service .culmun3BlockB01 .item .image:hover {
+  filter: brightness(0.1);
 }
 
 #Service .culmun3BlockB01 .text {
@@ -416,6 +375,14 @@ Service Settings
   font-size: 4.0rem;
   font-style: italic;
   font-weight: bold;
+}
+
+#Service .bgTextA01 {
+  margin-right: 15px;
+  text-align: right;
+  font-size: 9.0rem;
+  font-weight: bold;
+  color: rgba(23, 23, 23, 0.05);
 }
 
 
@@ -505,11 +472,393 @@ Contact Settings
 footer Settings
 ==============================*/
 footer {
-
+  width: 100%;
 }
 
 footer .copyright {
   padding: 30px 0;
   text-align: center;
   font-size: 1.4rem;
+}
+
+
+
+/*==============================
+SP Settings
+==============================*/
+@media screen and (max-width:767px) {
+  * {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .inner {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+/* header settings
+------------------------------*/
+  header .headerNav {
+    display: none;
+  }
+
+  header .headerNavToggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    top: 37px;
+    z-index: 9000;
+  }
+
+  header .headerNavToggle:hover {
+    cursor: pointer;
+  }
+
+  header .headerNavToggle i {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+  }
+
+  header .headerNavToggle i:nth-child(1) {
+    top: 0;
+  }
+
+  header .headerNavToggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  header .headerNavToggle i:nth-child(3) {
+    bottom: 0;
+  }
+
+  header .headerNavToggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+
+  header .headerNavToggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .headerNavToggle.show i:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+
+  header .headerNav.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + 30px);
+    margin: 0 0 0 -15px;
+  }
+
+  header .headerNav.show ul {
+    height: 100vh;
+    background: #282F35;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  header .headerNav.show ul li {
+    margin: 0 0 30px 0;
+  }
+
+/* firstViewArea settings
+------------------------------*/
+  #firstViewArea .inner {
+    width: 100%;
+    margin: 0;
+    left: 0;
+  }
+  
+  #firstViewArea .headingBlockA01 {
+    position: absolute;
+    top: 202px;
+    left: 15px;
+    z-index: 2000;
+  }
+  
+  #firstViewArea .headingBlockA01 h1 {
+    margin-bottom: 53px;
+    font-size: 3.7rem;
+  }
+  
+  #firstViewArea .headingBlockA01 .lead {
+    font-size: 3.0rem;
+  }
+  
+  #firstViewArea .firstViewImage {
+    margin: -96px calc(50% - 50vw) 0;
+  }
+
+
+/* CONCEPT settings
+------------------------------*/
+  #CONCEPT {
+    padding-top: 100px;
+  }
+
+  #CONCEPT .inner {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+
+  #CONCEPT .headingBlockB01 {
+    margin-bottom: 70px;
+  }
+
+  #CONCEPT .headingBlockB01 h2 {
+    font-size: 3.0rem;
+  }
+
+  #CONCEPT .headingBlockB01 h2::after {
+    width: 90px;
+    left: 187px;
+  }
+
+  #CONCEPT .textBlockA01 {
+    margin-bottom: 34px;
+    font-size: 2.0rem;
+    letter-spacing: 0;
+  }
+
+  #CONCEPT .imageBlockA01 {
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  #CONCEPT .imageBlockA01 .text {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+
+  #CONCEPT .imageBlockA01 .image {
+    width: 100%;
+  }
+
+  #CONCEPT .bgTextA01 {
+    text-align: right;
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: rgba(23, 23, 23, 0.05);
+  }
+
+
+/* Service settings
+------------------------------*/
+  #Service {
+    padding: 100px 0 64px 0;
+  }
+
+  #Service .inner {
+    width: 100%;
+  }
+
+  #Service .headingBlockB01 {
+    margin: 0 0 70px 15px;
+  }
+
+  #Service .headingBlockB01 h2 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+  }
+
+  #Service .headingBlockB01 h2::after {
+    width: 100px;
+    left: 158px;
+  }
+
+  #Service .culmun3BlockB01 {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #Service .culmun3BlockB01 .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #Service .culmun3BlockB01 .item .itemInner {
+    display: block;
+  }
+
+  #Service .culmun3BlockB01 .item .image:hover {
+    filter: brightness(0.1);
+  }
+
+  #Service .culmun3BlockB01 .text {
+    width: 100%;
+    top: calc(50% - 1.0rem);
+    font-size: 2.0rem;
+  }
+
+  #Service .bgTextA01 {
+    margin-right: 15px;
+    font-size: 4.0rem;
+  }
+
+/* Works settings
+------------------------------*/
+  #Works {
+    background: url("/images/works-bgi.png") 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  #Works .inner {
+    padding: 191px 0 40px 0;
+  }
+
+  #Works .headingBlockB02 {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    left: 104px;
+  }
+
+  #Works .headingBlockB02 h2 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    position: relative;
+  }
+
+  #Works .headingBlockB02 h2::after {
+    width: 100px;
+    left: 141px;
+  }
+
+  #Works .culmun3BlockA01 {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #Works .culmun3BlockA01 .item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #Works .culmun3BlockA01 .item .text {
+    padding: 25px 20px;
+  }
+
+  #Works .btnBlockA01 {
+    width: 100%;
+    margin-bottom: 40px;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  #Works .btnBlockA01 .btn {
+    margin: 18px auto;
+    display: block;
+    overflow: visible;
+  }
+
+  #Works .btnBlockA01 .btn a {
+    overflow: visible;
+    padding: 19px 71px 18px;
+    background: #f7d43f;
+    border-radius: 30px;
+  }
+
+  #Works .btnBlockA01 a:hover {
+    text-decoration: underline;
+  }
+
+  #Works .bgTextB01 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05);
+  }
+
+
+/* Contact settings
+------------------------------*/
+  #Contact {
+    padding: 109px 0 0 0;
+    background: url("/images/contact-bgi.png") center 0 no-repeat;
+    background-size: cover;
+  }
+
+  #Contact .headingBlockB02 {
+    margin-bottom: 70px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #Contact .headingBlockB02 h2 {
+    font-size: 3.0rem;
+    left: 0;
+  }
+
+  #Contact .headingBlockB02 h2::after {
+    display: block;
+    content: "";
+    width: 200px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    left: 269px;
+  }
+
+  #Contact .bgTextB01 {
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.05);
+  }
+
+  #Contact .btnBlockA01 {
+    width: 100%;
+    margin-bottom: 40px;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  #Contact .btnBlockA01 .btn {
+    margin: 18px auto;
+    display: block;
+    overflow: visible;
+  }
+
+  #Contact .btnBlockA01 .btn a {
+    overflow: visible;
+    padding: 19px 71px 18px;
+    background: #f7d43f;
+    border-radius: 30px;
+  }
+
+  #Contact .btnBlockA01 a:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,7 +1,14 @@
 $('.slick01').slick({
-  autoplay: true,
-  autoplaySpeed: 5000,
+  // autoplay: true,
+  // autoplaySpeed: 5000,
   variableWidth: true,
+  centerMode: true,
+  responsive: [{
+    breakpoint: 768,
+    settings: {
+      centerMode: true,
+    }
+  }]
 });
 
 
@@ -44,5 +51,10 @@ $(function(){
 
 //ハンバーガーメニュー
 $('.headerNavToggle').on('click',function(){
-  $('.headerNavToggle, headerNav').toggleClass('show');
+  $('.headerNavToggle, .headerNav').toggleClass('show');
+});
+
+// リンクをクリックしたらメニューを閉じる
+$('#headerNavList a[href]').on('click', function(event) {
+  $('.headerNavToggle').trigger('click');
 });
