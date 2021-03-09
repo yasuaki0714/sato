@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+
+  <a href="#" class="cp_btn">button</a>
+
+
+  <div class="content">
+    <a class="js-modal-open" href="" data-target="modal01">クリックでモーダル1を表示</a><br>
+    <a class="js-modal-open" href="" data-target="modal02">クリックでモーダル2を表示</a>
+  </div>
+
+  <div id="modal01" class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+          <p>1つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+          <a class="js-modal-close" href="">閉じる</a>
+      </div><!--modal__inner-->
+  </div><!--modal-->
+  <div id="modal02" class="modal js-modal">
+      <div class="modal__bg js-modal-close"></div>
+      <div class="modal__content">
+          <p>2つ目モーダルウィンドウです。ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+          <a class="js-modal-close" href="">閉じる</a>
+      </div><!--modal__inner-->
+  </div><!--modal-->
+
+
+
+
+    <!-- sccript -->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

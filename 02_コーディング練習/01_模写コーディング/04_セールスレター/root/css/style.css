@@ -1,0 +1,438 @@
+@charset 'utf-8';
+
+._bg-block {
+  background: #000;
+}
+
+._bg-grey {
+  background: #e8e8e8;
+}
+
+/*==============================
+HTML Settings
+==============================*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  font-family: 'Noto Serif','Noto Serif JP', sans-serif;
+  font-size: 1.9rem;
+  line-height: 1.88;
+  letter-spacing: 0.09em;
+  color: #282F35;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #282F35;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* .inner {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+} */
+
+ul,ol,li {
+  list-style: none;
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+.sectionWrapper {
+  padding: 60px 0 90px;
+  margin-bottom: 50px;
+}
+
+
+/*==============================
+headerArea Settings
+==============================*/
+#headerArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+#headerArea .inner {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto;
+}
+
+#headerArea .inner .logo {
+  width: 314px;
+  margin: 19px 0 0 0 ;
+}
+
+#headerArea .inner .logo > a {
+  display: block;
+}
+
+#headerArea .inner .logo > a:hover {
+  opacity: 0.5;
+}
+
+#headerArea .inner .headerBtnBlock {
+
+}
+
+a.headerBtn {
+	display: block;
+	position: relative;
+	width: 145px;
+	padding: 15px;
+  font-size: 1.9rem;
+  font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+	background: #000;
+	overflow: hidden;
+	z-index: 1 !important;
+}
+a.headerBtn:after {
+	content:"";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	background : #fff;
+	opacity: 0;
+	transform: translateX(-50%) translateY(-50%);
+	transition: 0.5s;
+	z-index: -1;
+}
+a.headerBtn:hover {
+	color: #000;
+}
+a.headerBtn:hover:after {
+	width: 100%;
+	opacity: 1;
+}
+a.headerBtn:active:after {
+	height: 350%;
+	opacity: 1;
+}
+
+
+/*==============================
+top Settings
+==============================*/
+#top {
+
+}
+
+#top video {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+
+/*==============================
+prologue Settings
+==============================*/
+#prologue {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#prologue h2 {
+  margin-top: 50px;
+}
+
+#prologue h2 img {
+  width: 881px;
+  margin: 0 auto;
+}
+
+#prologue .textBlockA01 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+#prologue .imageBlockA01 {
+  margin-top: 50px;
+}
+
+#prologue .imageBlockA01 img {
+  width: 881px;
+  margin: 0 auto;
+}
+
+
+/*==============================
+jisseki Settings
+=============================*/
+#jisseki {
+  padding: 180px 0;
+}
+
+#jisseki .sectionInner {
+  width: 980px;
+  margin: 0 auto 50px;
+}
+
+#jisseki .headingBlockA01 {
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#jisseki ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#jisseki ul > li {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+#jisseki ul > li:nth-child(3n) {
+  border-right: 1px solid #eee;
+}
+
+#jisseki ul > li > a {
+  padding: 23px 0;
+  text-align: center;
+  display: block;
+  font-size: 1.7rem;
+  line-height: 30px;
+}
+
+#jisseki ul > li > a:hover {
+  opacity: 0.5;
+}
+
+#jisseki ul > li > a > img {
+  margin: 0 auto 30px;
+  width: 179px;
+  border: 1px solid #eee;
+}
+
+#jisseki ul > li > a > .kind {
+  color: #ccc;
+}
+
+#jisseki ul > li > a > .btnBlockA01 {
+  width: 80%;
+  margin: 0 auto;
+  background: #000 url('/images/yajirushi02.png') 95% center no-repeat;
+
+  color: #fff;
+}
+
+#jisseki .bnrBlockA01 {
+  margin: 98px auto 0;
+  width: 980px;
+}
+
+#jisseki .bnrBlockA01 a {
+  display: block;
+}
+
+#jisseki .bnrBlockA01 a:hover {
+  opacity: 0.5;
+}
+
+
+/*==============================
+experience Settings
+=============================*/
+#experience {
+  padding: 180px 0;
+  margin-bottom: 50px;
+}
+
+#experience h2 {
+  margin-bottom: 80px;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#experience ul {
+  text-align: center;
+}
+
+#experience ul li {
+  margin-bottom: 20px;
+}
+
+#experience .imageBlockB01 {
+  box-sizing: border-box;
+  width: 980px;
+  margin: 0 auto;
+  padding: 50px 300px 50px 50px;
+  background: #000 url('/images/exp_bg.jpg') 90% center no-repeat;
+  color: #fff;
+  font-size: 1.9rem;
+}
+
+#experience .imageBlockB01 p:not(:last-child) {
+  margin-bottom: 1.9rem;
+}
+
+
+/*==============================
+greeting Settings
+=============================*/
+#greeting {
+  padding: 180px 0;
+  margin-bottom: 50px;
+}
+
+#greeting .sectionInner {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#greeting h2 {
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#greeting .rightImgBlockA01 {
+  display: flex;
+  margin: 30px 0;
+}
+
+#greeting .rightImgBlockA01 .text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#greeting .rightImgBlockA01 .img {
+  margin: 0 0 50px 80px;
+}
+
+#greeting .rightImgBlockA01 .img img {
+  width: 250px;
+  display: block;
+}
+
+#greeting .leftImgBlockA01 {
+  display: flex;
+  margin: 30px 0;
+}
+
+#greeting .leftImgBlockA01 .img {
+  margin: 0 0 50px 80px;
+}
+
+#greeting .leftImgBlockA01 .img img {
+  width: 250px;
+  display: block;
+}
+
+#greeting .leftImgBlockA01 .text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#greeting .leftImgBlockA01 .img {
+  margin: 0 80px 50px 0;
+}
+
+#greeting .leftImgBlockA01 .img img {
+  width: 250px;
+  display: block;
+}
+
+
+/*==============================
+kouka Settings
+=============================*/
+#kouka {
+  padding: 180px 0;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+#kouka .sectionInner {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#kouka h2 {
+  margin-bottom: 80px;
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#kouka .rightImgBlockB01 {
+  display: flex;
+}
+
+#kouka .rightImgBlockB01 .text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#kouka .rightImgBlockB01 .img {
+  margin:0 0 50px 80px;
+}
+
+#kouka .rightImgBlockB01 .img img {
+  width: 285px;
+  display: block;
+}
+
+#kouka .leftImgBlockB01 {
+  display: flex;
+}
+
+#kouka .leftImgBlockB01 .text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#kouka .leftImgBlockB01 .img {
+  margin:0 80px 50px 0;
+}
+
+#kouka .leftImgBlockB01 .img img {
+  width: 285px;
+  display: block;
+}
+
+
+/*==============================
+movie Settings
+=============================*/
+#movie {
+  padding: 180px 0;
+  margin-bottom: 50px;
+}
+
+#movie h2 {
+  text-align: center;
+  font-size: 2.0rem;
+  margin-bottom: 8%;
+}
