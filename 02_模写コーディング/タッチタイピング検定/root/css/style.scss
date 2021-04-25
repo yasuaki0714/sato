@@ -1,0 +1,1193 @@
+@charset 'utf-8';
+
+$breakpoint-sp: 670px;
+$breakpoint-tb: 1000px;
+
+@mixin sp {
+  @media (max-width: ($breakpoint-sp)) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (max-width: ($breakpoint-tb)) {
+    @content;
+  }
+}
+
+html {
+  color: #141414;
+  font-size: 62.5%; 
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.92;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:link {
+  color: #141414;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba($color: #000, $alpha: 0.5);
+  z-index: 99999;
+  .header__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .header__container__left {
+      display: flex;
+      .header__logo {
+        width: 150px;
+        margin: 20px 20px 0 20px;
+      }
+      .header__gnav {
+        display: flex;
+        li {
+          padding: 0 10px;
+          a {
+            display: block;
+            color: #fff;
+            font-size: 1.4rem;
+            line-height: 80px;
+          }
+          &:hover {
+            background: rgba($color: #fff, $alpha: 0.2);
+          }
+        }
+      }
+    }
+    .header__container__right {
+      .btn {
+        a {
+          display: block;
+          margin: 20px 20px 20px 0;
+          padding: 0 30px;
+          background: linear-gradient(45deg, #fc0075, #038af1 100%);
+          line-height: 40px;
+          color: #fff;
+          border-radius: 20px;
+        }
+      }
+      &:hover {
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
+    }
+  }
+  @include sp {
+    width: 100%;
+    height: 80px;
+    .header__container {
+      width: 100%;
+      margin: 0;
+      .header__container__left {
+        display: block;
+        .header__logo {
+          width: 150px;
+        }
+        .header__gnav {
+          display: none;
+        }
+      }
+      .header__container__right {
+        display: none;
+      }
+    }
+  }
+}
+
+.fv__wrapper {
+  width: 100%;
+  height: 450px;
+  padding: 250px 0 0 0;
+  background: url("/images/haikei.jpg") center no-repeat;
+  background-size: cover;
+  #fv {
+    max-width: 1170px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    .fv__lead {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+      .underline {
+        background: linear-gradient(transparent 75%, #fc0075 0%);
+      }
+    }
+    .fv__title {
+      margin: 10px 0 50px 0;
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+    .fv__container {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 100px 0;
+      .fv__container__item {
+        text-align: left;
+        position: relative;
+        .icon {
+          padding-left: 50px;
+        }
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-size: 4.8rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f2c1";
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:nth-child(2) {
+          margin: 0 120px;
+        }
+      }
+    }
+    .icon__circle {
+      position: relative;
+      background-color: royalblue;
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: normal;
+        content: "\f13a";
+        width: 50px;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1.75rem);
+      }
+    }
+  }
+  @include sp {
+    #fv {
+      width: 100%;
+      margin: 0;
+      .fv__lead {
+        font-size: 1.4rem;
+        letter-spacing: normal;
+      }
+      .fv__title {
+        letter-spacing: 5px;
+      }
+      .fv__container {
+        padding: 0 15px;
+        justify-content: space-between;
+        .fv__container__item {
+          text-align: center;
+          .icon {
+            padding-left: 0;
+            font-size: 1.2rem;
+          }
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: normal;
+            content: "\f2c1";
+            position: unset;
+          }
+          &:nth-child(2) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about__wrapper {
+  height: 350px;
+  background: url("/images/haikei2.jpg") center no-repeat;
+  background-size: cover;
+  #about {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 42px 0 0 120px;
+    .about__box {
+      width: 240px;
+      margin: 0 0 38px 0;
+      padding: 25px 30px;
+      background: #038af1;
+      color: #fff;
+      font-size: 1.2rem;
+      position: relative;
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #038af1;
+        transform: rotate(45deg);
+        position: absolute;
+        top: calc(100% - 10px);
+        left: 20%;
+      }
+    }
+    .about__text {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      line-height: 250%;
+      .underline {
+        font-size: 1.9rem;
+        border-bottom: 3px solid #038af1;
+      }
+    }
+  }
+  @include sp {
+    #about {
+      width: calc(100% - 20px);
+      padding-left: 20px;
+      .about__box {
+        width: 180px;
+      }
+      .about__text {
+        .underline {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.reason__wrapper {
+  padding-bottom: 50px;
+  #reason {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    .reason__icon__wrapper {
+      background: #ccc;
+      .reason__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -150px;
+        left: calc(50% - 50px);
+        background: #fff;
+        border-radius: 50% 50% 0 0;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f559";
+          color: #fc0075;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 1.75rem);
+        }
+        p {
+          position: absolute;
+          top: 70px;
+          left: 15px;
+          font-weight: 700;
+          line-height: 40px;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+    h2 {
+      margin: 100px 0 0 0;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 700;
+      .small {
+        font-size: 1.8rem;
+      }
+      .gradation {
+        font-size: 3.2rem;
+        background: -webkit-linear-gradient(270deg, #fc0075 0%,#038af1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .reason__container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 30px auto;
+      .reason__container__box {
+        width: 32%;
+        .title {
+          font-weight: 700;
+          color: #fc0075;
+        }
+        .text {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  @include sp {
+    #reason {
+      width: 100%;
+      margin: 0;
+      .reason__container {
+        display: block;
+        margin: 0 15px;
+        .reason__container__box {
+          width: 100%;
+          margin: 0 0 20px 0;
+          .title {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.check__wrapper {
+  padding: 1px 0;
+  background: url("/images/haikei3.jpg") center no-repeat;
+  background-size: cover;
+  #check {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    .check__icon__wrapper {
+      background: rgba(244, 222, 180,0.3);
+      .check__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -150px;
+        left: calc(50% - 50px);
+        background: rgba(244, 222, 180,0.3);
+        border-radius: 50% 50% 0 0;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f328";
+          color: #038af1;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 1.75rem);
+        }
+        p {
+          position: absolute;
+          top: 70px;
+          left: 13px;
+          padding: 0 15px;
+          font-weight: 700;
+          line-height: 40px;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+    h2 {
+      margin: 100px 0 40px 0;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+    }
+    p {
+      margin: 0 0 40px 0;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .check__box {
+      width: 600px;
+      margin: 0 auto 40px;
+      padding: 20px;
+      background: rgba($color: #fff, $alpha: 0.4);
+      border: 2px solid #038af1;
+      border-radius: 5px;
+      p {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+  }
+  @include sp {
+    #check {
+      width: 100%;
+      .check__box {
+        width: calc(100% - 74px);
+        margin: 0 15px 30px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.contents__wrapper {
+  padding: 30px 0 70px;
+  background: url("/images/naiyou.jpg") center no-repeat;
+  background-size: cover;
+  #contents {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      margin: 30px;
+      font-size: 2.0rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.3rem;
+      margin: 0 0 15px 0;
+    }
+    table {
+      width: 70%;
+      margin: 15px auto;
+      border-collapse: separate;
+      border-spacing: 4px;
+      thead {
+        tr {
+          box-sizing: border-box;
+          th {
+            font-size: 1.5rem;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px 0;
+            background: #d4e5ff;
+            border: 1px solid #038af1;
+            border-radius: 10px;
+            border-collapse: separate;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 1.5rem;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px 0;
+            border: 1px solid #038af1;
+            border-radius: 10px;
+            border-collapse: separate;
+          }
+          td.bg {
+            background: rgba(240, 205, 241, 0.5);
+          }
+        }
+      }
+    }
+    .contents__btn {
+      display: flex;
+      justify-content: center;
+      a {
+        display: block;
+        width: 400px;
+        margin: 20px 20px 20px 0;
+        padding: 10px 30px;
+        background: linear-gradient(45deg, #fc0075, #038af1 100%);
+        line-height: 40px;
+        color: #fff;
+        border-radius: 30px;
+      }
+      &:hover {
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
+    }
+  }
+  @include sp {
+    #contents {
+      width: auto;
+      padding: 0 15px;
+      p {
+        font-size: 1.2rem;
+        letter-spacing: -1px;
+      }
+      table {
+        width: 100%;
+        margin: 0 0 15px;
+        thead {
+          tr {
+            th {
+              font-size: 1.0rem;
+            }
+          }
+        }
+      }
+      .contents__btn {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.flow__wrapper {
+  padding: 0 50px 100px;
+  background: #038af1;
+  #flow {
+    max-width: 1170px;
+    margin: 0 auto;
+    .flow__icon__wrapper {
+      position: relative;
+      padding: 50px 0 0 0;
+      .flow__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 50px);
+        background: #038af1;
+        border-radius: 50% 50% 0 0;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f0ca";
+          color: #fff;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 1.75rem);
+        }
+        p {
+          padding: 0 15px;
+          position: absolute;
+          top: 70px;
+          left: 10px;
+          font-weight: 700;
+          line-height: 40px;
+          color: #fff;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+    h2 {
+      margin: 85px 0 30px 0;
+      font-size: 2.4rem;
+      text-align: center;
+      color: #fff;
+    }
+    .flow__container {
+      display: flex;
+      justify-content: space-between;
+      .flow__container__box {
+        width: 22%;
+        img {
+          margin: 0 0 15px 0;
+        }
+        .title {
+          margin: 0 0 20px 0;
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+        .text {
+          font-size: 1.4rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+  @include sp {
+    #flow {
+      width: 100%;
+      .flow__container {
+        display: block;
+        padding: 0 15px;
+        .flow__container__box {
+          width: 100%;
+          margin: 0 0 10px;
+          img {
+            margin: 0;
+          }
+          .title {
+            margin: 10px 0;
+            font-size: 2.0rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @include tb {
+    #flow {
+      .flow__container {
+        flex-wrap: wrap;
+        .flow__container__box {
+          width: 48%;
+          margin-bottom: 30px;
+          .title {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.support__wrapper {
+  padding: 100px 0 50px 0;
+  #support {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    .support__icon {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: -150px;
+      left: calc(50% - 50px);
+      background: #fff;
+      border-radius: 50% 50% 0 0;
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: normal;
+        content: "\f590";
+        color: #fc0075;
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        left: calc(50% - 1.75rem);
+      }
+      p {
+        padding: 0 15px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        font-weight: 700;
+        line-height: 40px;
+        color: #000;
+        border-bottom: 1px solid #000;
+      }
+    }
+    h2 {
+      margin: 0 0 30px 0;
+      font-size: 2.0rem;
+      text-align: center;
+      letter-spacing: 3px;
+      line-height: 200%;
+    }
+    .support__container {
+      display: flex;
+      margin: 0 0 40px 0;
+      padding: 0 30px;
+      .image {
+        display: block;
+        width: 50%;
+        img {
+          display: block;
+          height: 100%;
+        }
+      }
+      .detail {
+        width: 50%;
+        padding: 30px;
+        position: relative;
+        background: #fc0075;
+        color: #fff;
+        .title {
+          margin: 0 0 20px;
+          font-size: 2.0rem;
+          font-weight: 700;
+          text-align: center;
+        }
+        .text {
+          max-width: 380px;
+          font-size: 1.4rem;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          border-top: 30px solid #fc0075;
+          border-right: 20px solid transparent;
+          border-left: 20px solid transparent;
+          top: 60%;
+          left: -5%;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .support__video {
+      display: flex;
+      justify-content: center;
+      iframe {
+        width: 600px;
+        height: 330px;
+      }
+    }
+    .support__btn {
+      display: flex;
+      justify-content: center;
+      a {
+        display: block;
+        width: 400px;
+        margin: 20px 20px 20px 0;
+        padding: 10px 30px;
+        background: linear-gradient(45deg,#f2613a 0%,#f4a713 100%);
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        border-radius: 30px;
+      }
+      &:hover {
+        transform: scale(0.9);
+        transition: 0.3s;
+      }
+    }
+  }
+  @include sp {
+    #support {
+      width: 100%;
+      h2 {
+        font-size: 1.8rem;
+      }
+      .support__container {
+        display: block;
+        padding: 0 15px;
+        .image {
+          width: 100%;
+        }
+        .detail {
+          width: auto;
+          margin: 0;
+          padding: 15px;
+          .title {
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+          }
+          .text {
+            width: 100%;
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.30;
+          }
+          &::after {
+            position: absolute;
+            content: '';
+            border-top: 30px solid #fc0075;
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+            top: -10%;
+            left: 30%;
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .support__video {
+        iframe {
+          width: 300px;
+          height: 169px;
+        }
+      }
+      .support__btn {
+        a {
+          margin: 20px 0 0;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+.content__wrapper {
+  padding: 50px 0 70px;
+  background: url("/images/mensetu.jpg") center no-repeat;
+  background-size: cover;
+  .content {
+    max-width: 1170px;
+    margin: 0 auto;
+    color: #fff;
+    .title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin: 0 0 26px 0;
+      .underline {
+        background: linear-gradient(transparent 75%, #fc0075 0%);
+      }
+    }
+    .text {
+      margin: 0 0 20px;
+      font-size: 1.4rem;
+      text-align: center;
+      .underline {
+        display: inline-block;
+        background: linear-gradient(transparent 75%, #fc0075 0%);
+      }
+    }
+  }
+  @include sp {
+    background-size: 190%;
+    .content {
+      width: 100%;
+    }
+  }
+}
+
+.voice__wrapper {
+  position: relative;
+  padding: 50px 30px 90px;
+  #voice {
+    max-width: 1170px;
+    margin: 0 auto;
+    .voice__icon__wrapper {
+      position: relative;
+      padding: 50px 0 0 0;
+        .voice__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -100px;
+        left: calc(50% - 50px);
+        background: #fff;
+        border-radius: 50% 50% 0 0;
+          &::after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f086";
+          color: #fc0075;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 1.75rem);
+        }
+        p {
+          padding: 0 15px;
+          position: absolute;
+          top: 70px;
+          left: 10px;
+          font-weight: 700;
+          line-height: 40px;
+          color: #000;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+    h2 {
+      margin: 0 0 80px;
+      font-size: 2.0rem;
+      text-align: center;
+    }
+    .voice__container {
+      display: flex;
+      justify-content: space-between;
+      .voice__container__box__left {
+        position: relative;
+        width: 48%;
+        padding: 72px 0 0 0;
+        border: 1px solid #fc0075;
+        background: url("/images/haikei3.jpg");
+        .icon {
+          width: 110px;
+          position: absolute;
+          top: -50px;
+          left: calc(50% - 55px);
+        }
+        .name {
+          text-align: center;
+          p .large {
+            font-size: 2.4rem;
+            font-weight: 700;
+          }
+        }
+        .title {
+          padding: 20px 0;
+          text-align: center;
+          color: #fff;
+          background: #fc0075;
+        }
+        .text {
+          padding: 20px 25px 35px;
+        }
+      }
+      .voice__container__box__right {
+        position: relative;
+        width: 48%;
+        padding: 72px 0 0 0;
+        border: 1px solid #038af1;
+        background: url("/images/haikei3.jpg");
+        .icon {
+          width: 110px;
+          position: absolute;
+          top: -50px;
+          left: calc(50% - 55px);
+        }
+        .name {
+          text-align: center;
+          p .large {
+            font-size: 2.4rem;
+            font-weight: 700;
+          }
+        }
+        .title {
+          padding: 20px 0;
+          text-align: center;
+          color: #fff;
+          background: #038af1;
+        }
+        .text {
+          padding: 20px 25px 35px;
+        }
+      }
+    }
+  }
+  @include sp {
+    #voice {
+      width: 100%;
+      h2 {
+        margin: 0 0 70px 0;
+        text-align: center;
+      }
+      .voice__container {
+        display: block;
+        padding: 0 15px;
+        .voice__container__box__left {
+          width: 100%;
+          margin: 0 0 70px;
+        }
+        .voice__container__box__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.question__wrapper {
+  padding: 0 0 25px;
+  background: #e6e6e6;
+  #question {
+    max-width: 1170px;
+    margin: 0 auto;
+    .question__icon__wrapper {
+      position: relative;
+      padding: 50px 0 0 0;
+      .question__icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 50px);
+        background: #e6e6e6;
+        border-radius: 50% 50% 0 0;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 3.5rem;
+          font-weight: 700;
+          line-height: normal;
+          content: "\f059";
+          color: #038af1;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 1.6rem);
+        }
+        p {
+          padding: 0 15px;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          font-weight: 700;
+          line-height: 40px;
+          color: #000;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+    h2 {
+      margin: 30px 0 50px;
+      text-align: center;
+      font-size: 2.0rem;
+    }
+    .question__box {
+      width: 80%;
+      margin: 0 auto;
+      .question__box__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0 0 25px 0;
+        .q {
+          color: #fc0075;
+        }
+      }
+      .question__box__answer {
+        position: relative;
+        background-color: #fff;
+        margin: 0 0 45px 0;
+        padding: 30px 25px;
+        &::after {
+          position: absolute;
+          content: '';
+          border-top: 20px solid white;
+          border-right: 20px solid transparent;
+          border-left: 20px solid transparent;
+          top: -1%;
+          left: 5%;
+          transform: rotate(45deg);
+        }
+        p{
+          a {
+            color: #fc0075;
+            text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+          }
+        }
+      }
+    }
+  }
+  @include sp {
+    padding: 0 15px 50px;
+    #question {
+      width: 100%;
+    }
+  }
+}
+
+.application__wrapper {
+  padding: 60px 30px;
+  background: url("/images/juken.jpg") center no-repeat;
+  background-size: cover;
+  #application {
+    max-width: 1170px;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+      margin: 0 0 30px 0;
+      color: #fff;
+    }
+    p {
+      margin: 0 0 60px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 1.4rem;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .application__container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 30px;
+      .application__container__box {
+        width: 32%;
+        background: rgba($color: #fff, $alpha: 0.4);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        .title {
+          margin: 20px 0 0 0;
+          text-align: center;
+          font-size: 2.4rem;
+        }
+        select {
+          margin: 0 0 15px 0;
+        }
+        input {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+  @include tb {
+    padding: 60px 15px;
+    #application {
+      width: 100%;
+      h2 {
+        font-size: 1.6rem;
+      }
+      .application__container {
+        display: block;
+        max-width: 400px;
+        margin: 0 auto;
+        .application__container__box {
+          width: 100%;
+          margin: 0 0 40px;
+        }
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.footer {
+  .footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 0 50px;
+    .footer__logo {
+      width: 200px;
+    }
+    .footer__link01 {
+      display: flex;
+      justify-content: center;
+      li {
+        a {
+          font-size: 1.0rem;
+          padding: 0 8px;
+          border-right: 1px solid #000;
+        }
+        &:last-child {
+          a {
+          border: none;
+          }
+        }
+      }
+    }
+    .footer__link02 {
+      display: flex;
+      justify-content: center;
+      li {
+        a {
+          font-size: 1.0rem;
+          padding: 0 8px;
+          border-right: 1px solid #000;
+        }
+        &:last-child {
+          a {
+          border: none;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    background: #000;
+    #copyright {
+      padding: 15px 0;
+      font-size: 1.0rem;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

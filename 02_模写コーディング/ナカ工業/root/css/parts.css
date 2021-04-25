@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+.slick-item {
+  width: 100%;
+}
+
+.slick01 .slickItem {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/index_bg_01.png");
+  background-size: cover;
+}
+
+.slick01 .slickItem .itemInner {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  padding: 150px 60px 120px;
+}
+
+.slick01 .slickItem .textBlock01 {
+  width: 480px;
+}
+
+.slick01 .slickItem .textBlock01 .title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 23px 0;
+}
+
+.slick01 .slickItem .textBlock01 .title .subTitle {
+  font-size: 2.6rem;
+}
+
+.slick01 .slickItem .textBlock01 .text {
+  margin-bottom: 48px;
+}
+
+.slick01 .slickItem .textBlock01 p a {
+  font-weight: 700;
+}
+
+.slick01 .slickItem .textBlock01 p a::after {
+  content: "";
+  width: 42px;
+  height: 12px;
+  padding: 0 58px 0 0;
+  background: url("/images/index_ico_05.svg") right center no-repeat;
+  background-size: 42px 12px;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 100px;
+  right: 300px;
+  width: 200px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide-dots li button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.slide-dots li button:hover {
+  opacity: 0.5;
+}
+
+.slide-dots li button::before {
+  content: "0";
+}
+
+.slide-dots .slick-active button {
+  color: #8fc1c8;
+  border-bottom: 2px solid #8fc1c8;
+}
+
+
+@media screen and (max-width:767px) {
+  .slick01 .slickItem .itemInner {
+    background-image: url("/images/index_bg_01_sp.png");
+  }
+
+  .slick01 .slickItem .textBlock01 {
+    width: calc(100% - 50px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-top: 268px;
+    padding: 25px;
+    background: #fff;
+  }
+
+  .slick01 .slickItem .textBlock01 .title {
+    font-size: 2.1rem;
+  }
+  
+  .slick01 .slickItem .textBlock01 .title .subTitle {
+    font-size: 1.4rem;
+  }
+  
+  .slick01 .slickItem .textBlock01 .text {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 0;
+  }
+
+  .slick01 .slickItem .textBlock01 p a {
+    font-size: 1.2rem;
+  }
+
+  .slide-dots {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 200px;
+  }
+
+  .slide-dots li button {
+    color: #edd398;
+    font-size: 1.7rem;
+  }
+}
