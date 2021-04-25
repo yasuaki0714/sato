@@ -1,0 +1,340 @@
+@charset "UTF-8";
+html {
+  color: #141414;
+  font-size: 62.5%;
+  font-family: 'メイリオ', 'Meiryo', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.92;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a:hover,
+a:active,
+a:visited,
+a:link {
+  color: #141414;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.orenge {
+  color: #F5902E;
+}
+
+.green {
+  color: #4EA883;
+}
+
+/*==============================
+sidebar settings
+==============================*/
+.sidebar__wrapper {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  z-index: 999999;
+}
+
+.sidebar__wrapper .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn {
+  width: 46px;
+  height: 46px;
+  margin: 20px 0 0 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn i {
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: #333;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn i:first-child {
+  margin-bottom: 8px;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn i:last-child {
+  margin-top: 8px;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu {
+  padding: 36px 40px 30px 20px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu li {
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-right: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu li::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c1c1c1;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.sidebar__wrapper .sidebar .pagetop__btn {
+  margin: 0 0 20px 0;
+}
+
+.sidebar__wrapper .sidebar .pagetop__btn a {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: block;
+}
+
+.sidebar__wrapper .sidebar .pagetop__btn a::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 10px);
+  transform: rotate(-45deg);
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.fv__wrapper {
+  background: url("/resources/images/mv.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.fv__wrapper .fv {
+  position: relative;
+  width: 100%;
+}
+
+.fv__wrapper .fv .logo__block {
+  display: flex;
+  align-items: center;
+}
+
+.fv__wrapper .fv .logo__block .logo a img {
+  width: 180px;
+}
+
+.fv__wrapper .fv .logo__block .btn a {
+  display: block;
+  padding: 4px 30px 4px 15px;
+  position: relative;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #a6998f;
+}
+
+.fv__wrapper .fv .logo__block .btn a .inner {
+  min-width: 3em;
+}
+
+.fv__wrapper .fv .logo__block .btn a::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transform: rotate(135deg);
+}
+
+.fv__wrapper .fv .fv__box {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+}
+
+.fv__wrapper .fv .fv__box .fv__box__inner {
+  padding: 60px 10px 30px;
+  border: 1px solid #333;
+}
+
+.fv__wrapper .fv .fv__box .fv__box__inner .fv__box__title {
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+  font-size: 6.0rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: inherit;
+}
+
+.fv__wrapper .fv .fv__box .fv__box__inner .fv__box__text {
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  font-size: 3.6rem;
+  text-align: center;
+  color: #4EA883;
+  border-top: 2px solid #4EA883;
+}
+
+.fv__wrapper .fv .fv__scroll__btn {
+  position: absolute;
+  bottom: -70px;
+  left: calc(50% - 15px);
+}
+
+.fv__wrapper .fv .fv__scroll__btn a img {
+  width: 30px;
+}
+
+.fv__wrapper .fv__bottom img {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.main__section .main__section__inner .section__block .section__title__block {
+  padding: 0 0 70px 0;
+  background: url("/resources/images/bg.png") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.main__section .main__section__inner .section__block .section__title__block .section__title__block__inner {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main__section .main__section__inner .section__block .section__title__block .section__title__block__inner .heading__block__h1 {
+  padding: 60px 0 0;
+  text-align: center;
+}
+
+.main__section .main__section__inner .section__block .section__title__block .section__title__block__inner .heading__block__h1 h1 {
+  margin: 0 0 60px 0;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+  font-size: 3.4rem;
+  line-height: 1.4;
+}
+
+.main__section .main__section__inner .section__block .section__title__block .section__title__block__inner .heading__block__h1 .lead {
+  margin: 0 0 60px;
+}
+
+.main__section .main__section__inner .section__block .section__title__block .section__title__block__inner .section__text {
+  text-align: center;
+  font-size: 2.0rem;
+  color: #F5902E;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 {
+  padding: 65px 0;
+  background: url("/resources/images/bg01.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .heading__block__h2 {
+  position: relative;
+  margin: 0 0 28px;
+  padding: 0 50px;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .heading__block__h2 h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .heading__block__h2::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 52px;
+  background: url("/resources/images/ttl02item1.png");
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .heading__block__h2::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 52px;
+  background: url("/resources/images/ttl02item2.png");
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .btn__block {
+  position: relative;
+  width: 515px;
+  text-align: center;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .btn__block a {
+  display: block;
+  padding: 20px;
+  line-height: 35px;
+  color: #fff;
+  background: #ef9b31;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .btn__block a .inner {
+  font-size: 2.2rem;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .btn__block a .inner .notice {
+  font-size: 1.4rem;
+}
+
+.main__section .main__section__inner .section__block .btn__section01 .btn__section__inner .btn__block a::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(45deg);
+}
