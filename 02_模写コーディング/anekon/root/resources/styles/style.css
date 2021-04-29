@@ -47,6 +47,7 @@ sidebar settings
 }
 
 .sidebar__wrapper .sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,6 +65,7 @@ sidebar settings
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 5000;
 }
 
 .sidebar__wrapper .sidebar .sidebar__menu__btn i {
@@ -79,6 +81,28 @@ sidebar settings
 
 .sidebar__wrapper .sidebar .sidebar__menu__btn i:last-child {
   margin-top: 8px;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn.close i:first-child {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn.close i:nth-child(2) {
+  opacity: 0;
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__btn.close i:last-child {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.sidebar__wrapper .sidebar .sidebar__menu__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  width: 500px;
+  transform: translate(500px);
+  transition: all .5s;
 }
 
 .sidebar__wrapper .sidebar .sidebar__menu {
@@ -479,12 +503,13 @@ sidebar settings
 
 .recommend__block {
   padding: 100px 0;
-  background: url("/resources/images/sec03bg.png") 0 0 no-repeat;
+  background: url("/resources/images/sec03bg.png") center no-repeat;
   background-size: cover;
 }
 
 .recommend__block .recommend__block__inner {
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 250px;
   background: url("/resources/images/sec03.png") 0 0 no-repeat;
@@ -522,12 +547,29 @@ sidebar settings
   max-width: 970px;
   width: 100%;
   margin: 0 auto;
-  padding: 36px 100px 60px;
+  padding: 36px 0 60px;
   background: #fff;
 }
 
 .recommend__block .voice .voice__inner {
   background: #f5f4f0;
+}
+
+.recommend__block .voice .voice__inner .heading__block__h3 {
+  background: url("/resources/images/bg-voice-main.jpg") 120px top no-repeat;
+  background-size: cover;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+}
+
+.recommend__block .voice .voice__inner .heading__block__h3 h3 {
+  font-size: 3.0rem;
+  text-align: center;
+  color: #9E8F87;
+}
+
+.recommend__block .voice .voice__inner .heading__block__h3 .lead {
+  color: #9E8F87;
+  text-align: center;
 }
 
 .recommend__block .voice .voice__inner .voice__block .voice__tab {
@@ -655,4 +697,400 @@ sidebar settings
 .recommend__block .voice .voice__inner .voice__block .voice__btn .btn__list .white a:hover {
   opacity: 0.5;
   transition: 0.5s;
+}
+
+.biu__ico {
+  background: #fff;
+}
+
+.biu__ico .ico__image {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.biu__ico .biu__ico__title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.biu__ico .biu__ico__text {
+  text-align: center;
+}
+
+.btn__section02 {
+  padding: 65px;
+  background: url("/resources/images/bg05.jpg") 0 0 no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.btn__section02 .btn__section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn__section02 .btn__section__inner .heading__block__h2 {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 28px;
+  padding: 0 50px;
+}
+
+.btn__section02 .btn__section__inner .heading__block__h2 h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.btn__section02 .btn__section__inner .heading__block__h2::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 52px;
+  background: url("/resources/images/ttl02item1.png");
+}
+
+.btn__section02 .btn__section__inner .heading__block__h2::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 52px;
+  background: url("/resources/images/ttl02item2.png");
+}
+
+.btn__section02 .btn__section__inner .btn__block--orenge {
+  width: 515px;
+  margin: 0 0 30px 0;
+}
+
+.btn__section02 .btn__section__inner .btn__block--orenge a {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: #F5902E;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn__section02 .btn__section__inner .btn__block--orenge a .inner .notice {
+  font-size: 1.8rem;
+}
+
+.btn__section02 .btn__section__inner .btn__block--pink {
+  width: 515px;
+}
+
+.btn__section02 .btn__section__inner .btn__block--pink a {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: #f16395;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn__section02 .btn__section__inner .btn__block--pink a .inner .notice {
+  font-size: 1.8rem;
+}
+
+.content__detail {
+  padding: 100px 0 0;
+  background: #fff;
+}
+
+.content__detail .content__datail__inner .section__nav {
+  margin: 0 0 40px;
+}
+
+.content__detail .content__datail__inner .section__nav ul {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__detail .content__datail__inner .section__nav ul li {
+  width: 24%;
+}
+
+.content__detail .content__datail__inner .section__nav ul li a {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 30px 0 60px;
+  border: 8px solid #eaeaea;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content__detail .content__datail__inner .section__nav ul li a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  left: 0;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(135deg);
+}
+
+.content__detail .content__datail__inner #fail-point .heading__block {
+  padding: 60px 0;
+  text-align: center;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+}
+
+.content__detail .content__datail__inner #fail-point .heading__block .english-sub {
+  font-size: 1.8rem;
+  color: #e89f9b;
+}
+
+.content__detail .content__datail__inner #fail-point .heading__block h3 {
+  font-size: 3.6rem;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 {
+  width: 100%;
+  background: url("/resources/images/sec02item1.png") 0 0 no-repeat;
+  background-size: 100% 660px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text {
+  padding: 40px 0 0;
+  z-index: 1000;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text h4 {
+  position: relative;
+  padding: 7px 0 20px 78px;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+  font-size: 3.7rem;
+  line-height: 0.8;
+  color: #F5902E;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text h4 .subtitle {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 74px;
+  background: url("/resources/images/no1.png") 0 0 no-repeat;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text .text__block {
+  padding: 60px 50px;
+  background: #fff;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .text .text__block p:nth-child(2) {
+  margin: 36px 0 32px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block01 .inner .image {
+  margin-left: -50px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 {
+  margin: 50px 0 0 0;
+  width: 100%;
+  background: url("/resources/images/sec02item2.png") 0 0 no-repeat;
+  background-size: 100% 660px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text {
+  padding: 40px 0 0;
+  width: 50%;
+  z-index: 1000;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text h4 {
+  position: relative;
+  margin: 0 0 0 80px;
+  padding: 7px 0 20px 84px;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+  font-size: 3.7rem;
+  line-height: 0.8;
+  color: #F5902E;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text h4 .subtitle {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 74px;
+  background: url("/resources/images/no2.png") 0 0 no-repeat;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text .text__block {
+  padding: 60px 50px;
+  background: #fff;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text .text__block p:nth-child(2), .content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .text .text__block p:nth-child(3) {
+  margin: 36px 0 32px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block02 .inner .image {
+  margin-right: -50px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 {
+  width: 100%;
+  background: url("/resources/images/sec02item1.png") 0 0 no-repeat;
+  background-size: 100% 660px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text {
+  width: 50%;
+  padding: 40px 0 0;
+  z-index: 1000;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text h4 {
+  position: relative;
+  margin-right: -11px;
+  padding: 7px 0 20px 78px;
+  font-family: "ヒラギノ明朝 Pro W5", "Hiragino Mincho Pro", serif;
+  font-size: 3.7rem;
+  line-height: 1.0;
+  color: #F5902E;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text h4 .subtitle {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 74px;
+  background: url("/resources/images/no3.png") 0 0 no-repeat;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text .text__block {
+  padding: 60px 50px;
+  background: #fff;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .text .text__block p:nth-child(2) {
+  margin: 36px 0 32px;
+}
+
+.content__detail .content__datail__inner #fail-point .content .content__inner .content__block03 .inner .image {
+  margin-left: -50px;
+}
+
+footer .footer__inner .footer__top {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+footer .footer__inner .footer__top .footer__top__left {
+  width: 50%;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__logo {
+  width: 151px;
+  margin: 0 0 30px 0;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__adress {
+  font-size: 1.4rem;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__adress .time {
+  margin-top: 40px;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__adress .tel {
+  font-size: 4.3rem;
+  font-weight: 700;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__btn {
+  margin: 0 0 12px;
+}
+
+footer .footer__inner .footer__top .footer__top__left .footer__btn a {
+  display: block;
+  width: 420px;
+  padding: 20px 30px;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  background: #ef876b;
+}
+
+footer .footer__inner .footer__top .footer__top__left .sitemap {
+  font-size: 1.2rem;
+}
+
+footer .footer__inner .footer__middle {
+  width: 100%;
+  height: 500px;
+  background: olivedrab;
+}
+
+footer .footer__inner .footer__bottom #copyright {
+  font-size: 1.2rem;
+  text-align: center;
 }
